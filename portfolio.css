@@ -1,4 +1,7 @@
 body {
   background: linear-gradient(70deg,white,grey) fixed;
+}
 
+.navbar{
+    margin-bottom: 15px;
 }
