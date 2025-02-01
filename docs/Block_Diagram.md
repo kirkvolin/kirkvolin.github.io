@@ -1,5 +1,5 @@
 ---
-title: Charts
+title: Block Diagram
 ---
 
 ##Block Diagram: Bidirectional Internet Communication
