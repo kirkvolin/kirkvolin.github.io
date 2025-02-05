@@ -32,20 +32,19 @@ title: Component Selection
 
 | ESP Info                                      | Answer | Help                                                                                                      |
 | --------------------------------------------- | ------ | --------------------------------------------------------------------------------------------------------- |
-| Model                                         | ?      | Include the entire part number (leave off any letters at the end that specify the package type)           |
-| Product Page URL                              | ?      | Found on Espressif.com                                                                                    |
-| ESP32-S3-WROOM-1-N4 Datasheet URL             | ?      | Do not paste links directly into the table.  Use a [link](#)                                              |
+| Model                                         | ESP32-S3-WROOM-1-N4      | Include the entire part number (leave off any letters at the end that specify the package type)           |
+| Product Page URL                              | [Product Page](https://www.espressif.com/en/products/socs/esp32-s3)      | Found on Espressif.com                                                                                    |
+| ESP32-S3-WROOM-1-N4 Datasheet URL             | [Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf)      | Do not paste links directly into the table.  Use a [link](#)                                              |
 | ESP32 S3 Datasheet URL                        | ?      | Has more detail on functions                                                                              |
-| ESP32 S3 Technical Reference Manual URL       | ?      | Has details on I/O multiplexing, USB, and others                                                          |
-| Vendor link                                   | ?      | Digikey, Jameco, etc.  Do not paste links directly into the table.  Use a [link](#)                       |
-| Code Examples                                 | ?      | url(s) for libraries on github or other sites related to the microcontroller and your planned peripherals |
-| External Resources URL(s)                     | ?      | Search on Google and YouTube for other resources for each specific microcontroller.                       |
-| Unit cost                                     | ?      | Find on Digikey, Jameco, MPJA, or octopart                                                                |
-| Absolute Maximum Current for entire IC        | ?      | Find in the microcontroller datasheet                                                                     |
-| Supply Voltage Range                          | ?      | Min / Nominal / Max / Absolute Max, as found in datasheet                                                 |
-| Absolute Maximum current <br> (for entire IC) | ?      | as found in datasheet                                                                                     |
-| Maximum GPIO current <br> (per pin)           | ?      | as found in datasheet                                                                                     |
-| Supports External Interrupts?                 | ?      | as found in datasheet                                                                                     |
+| ESP32 S3 Technical Reference Manual URL       | [Reference Manual](https://www.espressif.com/sites/default/files/documentation/esp32-s3_technical_reference_manual_en.pdf)      | Has details on I/O multiplexing, USB, and others                                                          |
+| Vendor link                                   | ![Digikey](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639)      | Digikey, Jameco, etc.  Do not paste links directly into the table.  Use a [link](#)                       |
+| Code Examples                                 | [Code Examples](https://github.com/espressif/esp-idf/tree/master/examples)      | url(s) for libraries on github or other sites related to the microcontroller and your planned peripherals |
+| External Resources URL(s)                     | [External Resources](https://esp32io.com/tutorials/esp32-code-structure)      | Search on Google and YouTube for other resources for each specific microcontroller.                       |
+| Unit cost                                     | $2.95      | Find on Digikey, Jameco, MPJA, or octopart                                                                |
+| Absolute Maximum Current for entire IC        | 500mA      | Find in the microcontroller datasheet                                                                     |
+| Supply Voltage Range                          | 3.0-3.6V      | Min / Nominal / Max / Absolute Max, as found in datasheet                                                                                          |
+| Maximum GPIO current <br> (per pin)           | 40mA      | as found in datasheet                                                                                     |
+| Supports External Interrupts?                 | Yes      | as found in datasheet                                                                                     |
 | Required Programming Hardware, Cost, URL      | ?      | as found in datasheet                                                                                     |
 
 | Module         | # Available | Needed | Associated Pins (or * for any) |
