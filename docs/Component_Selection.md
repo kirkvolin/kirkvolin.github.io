@@ -3,19 +3,21 @@ title: Component Selection
 ---
 
 
-* Major Component Selection
+# Major Component Selection
 
-**Power Regulator
+## Power Regulator
 
 | Solution    | Pros                                                                                        | Cons                                      |
 |:-----------:|:-------------------------------------------------------------------------------------------:|:-----------------------------------------:|
 |LM2576HVS-3.3| 3.3V Fixed Output                                                                           |   Most Expensive                          |
-|             | Large footprint makes hand soldering easier                                                 |   Unfamiliar Manufacturer                 |
-|             | Requires minimal external components                                                        |   Somewhat confusing component diagram    |
+|![LM2576HVS-3.3](insert image link)             | Large footprint makes hand soldering easier                                                 |   Unfamiliar Manufacturer                 |
+|[Digikey](https://www.digikey.com/en/products/detail/umw/LM2576HVS-3-3/16705917)             | Requires minimal external components                                                        |   Somewhat confusing component diagram    |
 |             | High current output allows more components to operate from this regulator if needed.        |                                           |
+|:-----------:|:-------------------------------------------------------------------------------------------:|:-----------------------------------------:|
+|TESTING FORMAT| kjjkdasf| jlkasdjlkf|
 
 
-**ESP 32 Table
+## ESP 32 Table
 
 | ESP Info                                      | Answer | Help                                                                                                      |
 | --------------------------------------------- | ------ | --------------------------------------------------------------------------------------------------------- |
