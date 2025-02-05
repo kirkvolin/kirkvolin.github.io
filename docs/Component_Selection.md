@@ -7,15 +7,26 @@ title: Component Selection
 
 ## Power Regulator
 
-| Solution    | Pros                                                                                        | Cons                                      |
+| Solution 1  | Pros                                                                                        | Cons                                      |
 |:-----------:|:-------------------------------------------------------------------------------------------:|:-----------------------------------------:|
 |LM2576HVS-3.3| 3.3V Fixed Output                                                                           |   Most Expensive                          |
 |![LM2576HVS-3.3](insert image link)             | Large footprint makes hand soldering easier                                                 |   Unfamiliar Manufacturer                 |
-|[Digikey](https://www.digikey.com/en/products/detail/umw/LM2576HVS-3-3/16705917)             | Requires minimal external components                                                        |   Somewhat confusing component diagram    |
+|[Digikey](https://www.digikey.com/en/products/detail/umw/LM2576HVS-3-3/16705917)             | Requires minimal external components                                                        |   Somewhat confusing component datasheet    |
 |             | High current output allows more components to operate from this regulator if needed.        |                                           |
-|:-----------:|:-------------------------------------------------------------------------------------------:|:-----------------------------------------:|
-|TESTING FORMAT| kjjkdasf| jlkasdjlkf|
 
+| Solution 2 | Pros                                                                                          |Cons                                      |
+|:----------:|:---------------------------------------------------------------------------------------------:|:----------------------------------------:|
+|LM2574M-3.3 | 3.3V Fixed Output | Not a lot of extra current available for expanding the system|
+|![LM2574M-3.3](insert image link)| Pins have good spacing for hand soldering | Smallest component that could likely be hand soldered|
+|[Digikey](https://www.digikey.com/en/products/detail/texas-instruments/LM2674M-3-3-NOPB/287129)|Small footprint can be good for board design|  |
+|         | Cheapest option               | |
+|        |  Easy to follow datasheet
+
+|Solution 3 | Pros                                                                                          |Cons                                      |
+|:----------:|:--------------------------------------------------------------------------------------------:|:----------------------------------------:|
+|LM2676S-3.3 | Clear datasheet  | Single sided pins are close together, making hand soldering more difficult |
+|![LM2676S-3.3](insert image link)| Large footprint make it easy to handle | More expensive than another option |
+|[Digikey](https://www.digikey.com/en/products/detail/texas-instruments/LM2676S-3-3-NOPB/363809) |Plenty of excess amperage available if needed| Larger footprint takes up more space on PCB|
 
 ## ESP 32 Table
 
