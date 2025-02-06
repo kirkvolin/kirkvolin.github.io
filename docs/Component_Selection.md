@@ -37,6 +37,10 @@ title: Component Selection
 For a power regulator, the LM2676S-3.3 seems to be the optimal solution. It offers a good combination of price, usability, and versatility.
 Because of it's lower minimum input voltage of 4.5V, it enables the use of USB as a source of power compared to the LM2675M and LM2676S which wouldn't be able to accomplish this due to their minimum requirements of 6.5V and 8V respectively. The regulator's size of the TO263CA standard will also be much easier to manipulate and place for surface mount hand soldering.
 
+![Typical Application](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/Component%20Selection/LM2595S%20Typical%20Application.png?raw=true)
+![Buck Regulator](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/Component%20Selection/LM2595S%20Buck%20Regulator.png?raw=true)
+![Footprint](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/Component%20Selection/LM2595S%20Package.png?raw=true)
+
 ## Power Input
 
 |Solution 1 | Pros                                                                                          |Cons                                      |
@@ -81,11 +85,18 @@ For powering this subsystem, I feel that versatility is important. Because USB i
 
 | Module         | # Available | Needed | Associated Pins (or * for any) |
 | -------------- | ----------- | ------ | ------------------------------ |
+! Power          | 2           | 2      | 3V3, EN                        |
+| Ground         | 2           | 2      | GND, GND                       |
 | UART           | 3           | 2      |GPIO43 ~ GPIO44, GPIO17 ~ GPIO18|
 | External SPI   | 4           | 0      | N/A                            |
 | I2C            | 2           | 0      | N/A                            |
-| GPIO           | 45          | 5      | GPIO35-40                      |
+| GPIO           | 45          | 3      | *                              |
 | ADC            | 2           | 0      | N/A                            |
-| LED PWM        | 5           | 5      | GPIO 17, 18, 8, 19, 20         |
+| LED PWM        | 5           | 5      | *                              |
 | Motor PWM      | 0           | 0      | N/A                            |
 | USB Programmer | 1           | 1      | GPIO19 ~ GPIO20                |
+
+![Pinout](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/ESP32%20Pinout.png?raw=true)
+![Pin Table 1](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/ESP32%20Pin%20Definitions%201.png?raw=true)
+![Pin Table 2](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/ESP32%20Pin%20Definitions%202.png?raw=true)
+![Footprint](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/ESP32%20Pin%20Dimensions.png?raw=true)
