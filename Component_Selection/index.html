@@ -93,7 +93,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#component-selection-bidirectional-internet-communication" class="md-skip">
+        <a href="#team-role" class="md-skip">
           Skip to content
         </a>
       
@@ -334,8 +334,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -364,8 +362,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -374,6 +370,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#team-role" class="md-nav__link">
+    Team Role
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#component-selection-bidirectional-internet-communication" class="md-nav__link">
+    Component Selection - Bidirectional Internet Communication
+  </a>
+  
+    <nav class="md-nav" aria-label="Component Selection - Bidirectional Internet Communication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#power-regulator" class="md-nav__link">
     Power Regulator
   </a>
@@ -406,8 +417,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#power-input" class="md-nav__link">
     Power Input
   </a>
@@ -426,8 +437,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#esp-32" class="md-nav__link">
     ESP 32
   </a>
@@ -456,15 +467,34 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#usb-otg" class="md-nav__link">
+    USB OTG
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uart" class="md-nav__link">
+    UART
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#led-pwm" class="md-nav__link">
+    LED PWM
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#team-role" class="md-nav__link">
-    Team Role
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -534,8 +564,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -544,6 +572,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#team-role" class="md-nav__link">
+    Team Role
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#component-selection-bidirectional-internet-communication" class="md-nav__link">
+    Component Selection - Bidirectional Internet Communication
+  </a>
+  
+    <nav class="md-nav" aria-label="Component Selection - Bidirectional Internet Communication">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#power-regulator" class="md-nav__link">
     Power Regulator
   </a>
@@ -576,8 +619,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#power-input" class="md-nav__link">
     Power Input
   </a>
@@ -596,8 +639,8 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#esp-32" class="md-nav__link">
     ESP 32
   </a>
@@ -626,15 +669,34 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#usb-otg" class="md-nav__link">
+    USB OTG
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uart" class="md-nav__link">
+    UART
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#led-pwm" class="md-nav__link">
+    LED PWM
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#team-role" class="md-nav__link">
-    Team Role
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -661,6 +723,8 @@
   
 
 
+<h2 id="team-role">Team Role</h2>
+<p>My role in the team is the bidirection internet communication subsystem using MQTT protocol. For this subsystem, I will be using an ESP32-S3-WROOM-1-N4 surface mounted on a custom PCB. This subsystem will include UART to communicate with the sensor, actuator and human interface subsystems. The UART connection for human interface will be included for debugging and redundancy, as we are planning implementation of a wireless interface device which would communicate over the MQTT protocol. With this implementation, my device would be responsible for receiving and sending data over MQTT with the humnan interface device, and sending and receiving data from the senor and actuator subsystems. The communications will be used to control the speed and direction of a metal marble on a track through the use of copper coils to demonstrate magnetism, and sensor data received will provide position and velocity information to the interface device.</p>
 <h1 id="component-selection-bidirectional-internet-communication">Component Selection - Bidirectional Internet Communication</h1>
 <h2 id="power-regulator">Power Regulator</h2>
 <table>
@@ -1023,7 +1087,12 @@ Because of it's lower minimum input voltage of 4.5V, it enables the use of USB a
 <a class="glightbox" href="https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/ESP32%20Pin%20Definitions%202.png?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Pin Table 2" src="https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/ESP32%20Pin%20Definitions%202.png?raw=true" /></a></p>
 <h3 id="footprint_1">Footprint</h3>
 <p><a class="glightbox" href="https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/ESP32%20Pin%20Dimensions.png?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Footprint" src="https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/ESP32%20Pin%20Dimensions.png?raw=true" /></a></p>
-<h2 id="team-role">Team Role</h2>
+<h3 id="usb-otg">USB OTG</h3>
+<p><a class="glightbox" href="Link" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="USB OTG" src="Link" /></a></p>
+<h3 id="uart">UART</h3>
+<p><a class="glightbox" href="Link" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="UART" src="Link" /></a></p>
+<h3 id="led-pwm">LED PWM</h3>
+<p><a class="glightbox" href="Link" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="LED" src="Link" /></a></p>
 
 
 
