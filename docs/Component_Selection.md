@@ -2,6 +2,9 @@
 title: Component Selection
 ---
 
+## Team Role
+
+My role in the team is the bidirection internet communication subsystem using MQTT protocol. For this subsystem, I will be using an ESP32-S3-WROOM-1-N4 surface mounted on a custom PCB. This subsystem will include UART to communicate with the sensor, actuator and human interface subsystems. The UART connection for human interface will be included for debugging and redundancy, as we are planning implementation of a wireless interface device which would communicate over the MQTT protocol. With this implementation, my device would be responsible for receiving and sending data over MQTT with the humnan interface device, and sending and receiving data from the senor and actuator subsystems. The communications will be used to control the speed and direction of a metal marble on a track through the use of copper coils to demonstrate magnetism, and sensor data received will provide position and velocity information to the interface device.
 
 # Component Selection - Bidirectional Internet Communication
 
@@ -112,4 +115,16 @@ For powering this subsystem, I feel that versatility is important. Because USB i
 ### Footprint
 ![Footprint](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/ESP32%20Pin%20Dimensions.png?raw=true)
 
-## Team Role
+### USB OTG
+
+![USB OTG](Link)
+
+### UART
+
+![UART](Link)
+
+### LED PWM
+
+![LED](Link)
+
+
