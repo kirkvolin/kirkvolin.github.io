@@ -117,14 +117,16 @@ For powering this subsystem, I feel that versatility is important. Because USB i
 
 #### USB OTG
 
-![USB OTG](Link)
+![USB OTG](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/ESP32%20USB%20OTG.png?raw=true)
 
 #### UART
 
-![UART](Link)
+![UART](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/UART%201.png?raw=true)
+![UART2](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/UART%202.png?raw=true)
 
 #### LED PWM
 
-![LED](Link)
+![LED](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/LED%201.png?raw=true)
+![LED2](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/LED%202.png?raw=true)
 
 
