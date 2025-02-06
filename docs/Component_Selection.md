@@ -69,7 +69,7 @@ For powering this subsystem, I feel that versatility is important. Because USB i
 | Product Page URL                              | [Product Page](https://www.espressif.com/en/products/socs/esp32-s3)|
 | ESP32-S3-WROOM-1-N4 Datasheet URL             | [Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf)|
 | Reference Manual                              | [Reference Manual](https://www.espressif.com/sites/default/files/documentation/esp32-s3_technical_reference_manual_en.pdf)|
-| Vendor link                                   | ![Digikey](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639)      |
+| Vendor link                                   | [Digikey](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639)      |
 | Code Examples                                 | [Code Examples](https://github.com/espressif/esp-idf/tree/master/examples)      |
 | External Resources URL(s)                     | [External Resources](https://esp32io.com/tutorials/esp32-code-structure)      |
 | Unit cost                                     | $2.95      |
