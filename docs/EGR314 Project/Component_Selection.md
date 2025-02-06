@@ -96,7 +96,7 @@ For powering this subsystem, I feel that versatility is important. Because USB i
 
 | Module         | # Available | Needed | Associated Pins (or * for any) |
 | -------------- | ----------- | ------ | ------------------------------ |
-! Power          | 2           | 2      | 3V3, EN                        |
+| Power          | 2           | 2      | 3V3, EN                        |
 | Ground         | 2           | 2      | GND, GND                       |
 | UART           | 3           | 2      |GPIO43 ~ GPIO44, GPIO17 ~ GPIO18|
 | External SPI   | 4           | 0      | N/A                            |
