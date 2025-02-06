@@ -710,6 +710,9 @@
 </table>
 <p>For a power regulator, the LM2676S-3.3 seems to be the optimal solution. It offers a good combination of price, usability, and versatility.
 Because of it's lower minimum input voltage of 4.5V, it enables the use of USB as a source of power compared to the LM2675M and LM2676S which wouldn't be able to accomplish this due to their minimum requirements of 6.5V and 8V respectively. The regulator's size of the TO263CA standard will also be much easier to manipulate and place for surface mount hand soldering.</p>
+<p><a class="glightbox" href="https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/Component%20Selection/LM2595S%20Typical%20Application.png?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Typical Application" src="https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/Component%20Selection/LM2595S%20Typical%20Application.png?raw=true" /></a>
+<a class="glightbox" href="https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/Component%20Selection/LM2595S%20Buck%20Regulator.png?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Buck Regulator" src="https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/Component%20Selection/LM2595S%20Buck%20Regulator.png?raw=true" /></a>
+<a class="glightbox" href="https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/Component%20Selection/LM2595S%20Package.png?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Footprint" src="https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/Component%20Selection/LM2595S%20Package.png?raw=true" /></a></p>
 <h2 id="power-input">Power Input</h2>
 <table>
 <thead>
@@ -874,6 +877,18 @@ Because of it's lower minimum input voltage of 4.5V, it enables the use of USB a
 </thead>
 <tbody>
 <tr>
+<td>! Power</td>
+<td>2</td>
+<td>2</td>
+<td>3V3, EN</td>
+</tr>
+<tr>
+<td>Ground</td>
+<td>2</td>
+<td>2</td>
+<td>GND, GND</td>
+</tr>
+<tr>
 <td>UART</td>
 <td>3</td>
 <td>2</td>
@@ -894,8 +909,8 @@ Because of it's lower minimum input voltage of 4.5V, it enables the use of USB a
 <tr>
 <td>GPIO</td>
 <td>45</td>
-<td>5</td>
-<td>GPIO35-40</td>
+<td>3</td>
+<td>*</td>
 </tr>
 <tr>
 <td>ADC</td>
@@ -907,7 +922,7 @@ Because of it's lower minimum input voltage of 4.5V, it enables the use of USB a
 <td>LED PWM</td>
 <td>5</td>
 <td>5</td>
-<td>GPIO 17, 18, 8, 19, 20</td>
+<td>*</td>
 </tr>
 <tr>
 <td>Motor PWM</td>
@@ -923,6 +938,10 @@ Because of it's lower minimum input voltage of 4.5V, it enables the use of USB a
 </tr>
 </tbody>
 </table>
+<p><a class="glightbox" href="https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/ESP32%20Pinout.png?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Pinout" src="https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/ESP32%20Pinout.png?raw=true" /></a>
+<a class="glightbox" href="https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/ESP32%20Pin%20Definitions%201.png?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Pin Table 1" src="https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/ESP32%20Pin%20Definitions%201.png?raw=true" /></a>
+<a class="glightbox" href="https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/ESP32%20Pin%20Definitions%202.png?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Pin Table 2" src="https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/ESP32%20Pin%20Definitions%202.png?raw=true" /></a>
+<a class="glightbox" href="https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/ESP32%20Pin%20Dimensions.png?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Footprint" src="https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/ESP32%20Pin%20Dimensions.png?raw=true" /></a></p>
 
 
 
