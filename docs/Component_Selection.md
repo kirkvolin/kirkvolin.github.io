@@ -31,7 +31,7 @@ title: Component Selection
 |Solution 4 | Pros                                                                                          |Cons                                      |
 |:----------:|:--------------------------------------------------------------------------------------------:|:----------------------------------------:|
 |LM2595S-3.3 | Clear datasheet  | Single sided pins are close together, potentially making hand soldering more difficult |
-|![LM2676S-3.3](image)| Large footprint make it easy to handle | More expensive than another option |
+|![LM2676S-3.3](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/Component%20Selection/LM2595S-3.3.png?raw=true)| Large footprint make it easy to handle | More expensive than another option |
 |[Digikey](https://www.digikey.com/en/products/detail/texas-instruments/LM2595S-3-3-NOPB/363698) |Exceeds amperage requirement peak of 500mA for ESP32, but not as excessively as other options available| Larger footprint takes up more space on PCB|
 
 For a power regulator, the LM2676S-3.3 seems to be the optimal solution. It offers a good combination of price, usability, and versatility.
@@ -42,20 +42,20 @@ Because of it's lower minimum input voltage of 4.5V, it enables the use of USB a
 |Solution 1 | Pros                                                                                          |Cons                                      |
 |:----------:|:--------------------------------------------------------------------------------------------:|:----------------------------------------:|
 |Barrel jack |Consistent power | Need access to power outlets| 
-|![Barrel Plug](image)| Easy to implement | Separate cable required|
+|![Barrel Plug](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/Component%20Selection/Barrel%20Plug.png?raw=true)| Easy to implement | Separate cable required|
 |[Digikey](https://www.digikey.com/en/products/detail/tensility-international-corp/54-00165/10459297)|||
 
 |Solution 2 | Pros                                                                                          |Cons                                      |
 |:----------:|:--------------------------------------------------------------------------------------------:|:----------------------------------------:|
 |USB |Consistent power | Need access to power outlet or PC|
-|![Barrel Plug](image)| Relatively easy to implement | Separate cable required|
+|![USB B](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/Component%20Selection/Micro%20USB%20B.png?raw=true)| Relatively easy to implement | Separate cable required|
 |[Digikey](https://www.digikey.com/en/products/detail/amphenol-cs-fci/10118193-0001LF/2785388)|USB B/C are extremely common| Soldering can be tricky, esp. USB C |
 ||Can provide both power and data||
 
 |Solution 2 | Pros                                                                                          |Cons                                      |
 |:----------:|:--------------------------------------------------------------------------------------------:|:----------------------------------------:|
 |Onboard Battery |Portability | Need backup batteries/charger|
-|![Battery](image)| Relatively easy to implement | Would increase board size significantly or require separate board for power|
+|![Battery](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/Component%20Selection/18650%20Battery.png?raw=true)| Relatively easy to implement | Would increase board size significantly or require separate board for power|
 |[Digikey](https://www.digikey.com/en/products/detail/sparkfun-electronics/PRT-12895/5271298)|| Much more expensive to implement |
 ||||
 
@@ -68,14 +68,14 @@ For powering this subsystem, I feel that versatility is important. Because USB i
 | Model                                         | ESP32-S3-WROOM-1-N4      |
 | Product Page URL                              | [Product Page](https://www.espressif.com/en/products/socs/esp32-s3)|
 | ESP32-S3-WROOM-1-N4 Datasheet URL             | [Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf)|
-| Reference Manual| [Reference Manual](https://www.espressif.com/sites/default/files/documentation/esp32-s3_technical_reference_manual_en.pdf)      |
+| Reference Manual                              | [Reference Manual](https://www.espressif.com/sites/default/files/documentation/esp32-s3_technical_reference_manual_en.pdf)|
 | Vendor link                                   | ![Digikey](https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639)      |
 | Code Examples                                 | [Code Examples](https://github.com/espressif/esp-idf/tree/master/examples)      |
 | External Resources URL(s)                     | [External Resources](https://esp32io.com/tutorials/esp32-code-structure)      |
 | Unit cost                                     | $2.95      |
 | Absolute Maximum Current for entire IC        | 500mA      |
 | Supply Voltage Range                          | 3.0-3.6V      |
-| Maximum GPIO current (per pin)           | 40mA      |
+| Maximum GPIO current (per pin)                | 40mA      |
 | Supports External Interrupts?                 | Yes      |
 | Required Programming Hardware, Cost, URL      | None needed, ESP32-S3 is programmable through USB OTG|
 
