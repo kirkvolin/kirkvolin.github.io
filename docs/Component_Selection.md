@@ -89,3 +89,7 @@ For powering this subsystem, I feel that versatility is important. Because USB i
 | LED PWM        | 5           | 5      | GPIO 17, 18, 8, 19, 20         |
 | Motor PWM      | 0           | 0      | N/A                            |
 | USB Programmer | 1           | 1      | GPIO19 ~ GPIO20                |
+
+## General Components
+
+All surface mount components such as resistors, capacitors, etc. are planned to use 1206 standard for ease of handling and soldering.
