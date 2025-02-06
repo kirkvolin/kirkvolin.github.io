@@ -434,6 +434,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#power-input" class="md-nav__link">
+    Power Input
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#esp-32-table" class="md-nav__link">
     ESP 32 Table
   </a>
@@ -539,6 +546,13 @@
         <li class="md-nav__item">
   <a href="#power-regulator" class="md-nav__link">
     Power Regulator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#power-input" class="md-nav__link">
+    Power Input
   </a>
   
 </li>
@@ -668,80 +682,184 @@
 </tr>
 </tbody>
 </table>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Solution 4</th>
+<th style="text-align: center;">Pros</th>
+<th style="text-align: center;">Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">LM2595S-3.3</td>
+<td style="text-align: center;">Clear datasheet</td>
+<td style="text-align: center;">Single sided pins are close together, potentially making hand soldering more difficult</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a class="glightbox" href="image" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="LM2676S-3.3" src="image" /></a></td>
+<td style="text-align: center;">Large footprint make it easy to handle</td>
+<td style="text-align: center;">More expensive than another option</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://www.digikey.com/en/products/detail/texas-instruments/LM2595S-3-3-NOPB/363698">Digikey</a></td>
+<td style="text-align: center;">Exceeds amperage requirement peak of 500mA for ESP32, but not as excessively as other options available</td>
+<td style="text-align: center;">Larger footprint takes up more space on PCB</td>
+</tr>
+</tbody>
+</table>
+<p>For a power regulator, the LM2676S-3.3 seems to be the optimal solution. It offers a good combination of price, usability, and versatility.
+Because of it's lower minimum input voltage of 4.5V, it enables the use of USB as a source of power compared to the LM2675M and LM2676S which wouldn't be able to accomplish this due to their minimum requirements of 6.5V and 8V respectively. The regulator's size of the TO263CA standard will also be much easier to manipulate and place for surface mount hand soldering.</p>
+<h2 id="power-input">Power Input</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Solution 1</th>
+<th style="text-align: center;">Pros</th>
+<th style="text-align: center;">Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Barrel jack</td>
+<td style="text-align: center;">Consistent power</td>
+<td style="text-align: center;">Need access to power outlets</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a class="glightbox" href="image" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Barrel Plug" src="image" /></a></td>
+<td style="text-align: center;">Easy to implement</td>
+<td style="text-align: center;">Separate cable required</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://www.digikey.com/en/products/detail/tensility-international-corp/54-00165/10459297">Digikey</a></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Solution 2</th>
+<th style="text-align: center;">Pros</th>
+<th style="text-align: center;">Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">USB</td>
+<td style="text-align: center;">Consistent power</td>
+<td style="text-align: center;">Need access to power outlet or PC</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a class="glightbox" href="image" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Barrel Plug" src="image" /></a></td>
+<td style="text-align: center;">Relatively easy to implement</td>
+<td style="text-align: center;">Separate cable required</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://www.digikey.com/en/products/detail/amphenol-cs-fci/10118193-0001LF/2785388">Digikey</a></td>
+<td style="text-align: center;">USB B/C are extremely common</td>
+<td style="text-align: center;">Soldering can be tricky, esp. USB C</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Can provide both power and data</td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Solution 2</th>
+<th style="text-align: center;">Pros</th>
+<th style="text-align: center;">Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Onboard Battery</td>
+<td style="text-align: center;">Portability</td>
+<td style="text-align: center;">Need backup batteries/charger</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a class="glightbox" href="image" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Battery" src="image" /></a></td>
+<td style="text-align: center;">Relatively easy to implement</td>
+<td style="text-align: center;">Would increase board size significantly or require separate board for power</td>
+</tr>
+<tr>
+<td style="text-align: center;"><a href="https://www.digikey.com/en/products/detail/amphenol-cs-fci/10118193-0001LF/2785388">Digikey</a></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">Much more expensive to implement</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>For powering this subsystem, I feel that versatility is important. Because USB is already required to program the ESP32 chip, I will design the circuit board so that it can be powered from either the USB connector or a separate 5.5x2.5mm barrel jack which is a common standard that my teammates and I already have cables for through the Robotics 1 and 2 courses through the Robotics 1 and 2 courses.</p>
 <h2 id="esp-32-table">ESP 32 Table</h2>
 <table>
 <thead>
 <tr>
 <th>ESP Info</th>
 <th>Answer</th>
-<th>Help</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Model</td>
 <td>ESP32-S3-WROOM-1-N4</td>
-<td>Include the entire part number (leave off any letters at the end that specify the package type)</td>
 </tr>
 <tr>
 <td>Product Page URL</td>
 <td><a href="https://www.espressif.com/en/products/socs/esp32-s3">Product Page</a></td>
-<td>Found on Espressif.com</td>
 </tr>
 <tr>
 <td>ESP32-S3-WROOM-1-N4 Datasheet URL</td>
 <td><a href="https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf">Datasheet</a></td>
-<td>Do not paste links directly into the table.  Use a <a href="#">link</a></td>
 </tr>
 <tr>
-<td>ESP32 S3 Technical Reference Manual URL</td>
+<td>Reference Manual</td>
 <td><a href="https://www.espressif.com/sites/default/files/documentation/esp32-s3_technical_reference_manual_en.pdf">Reference Manual</a></td>
-<td>Has details on I/O multiplexing, USB, and others</td>
 </tr>
 <tr>
 <td>Vendor link</td>
 <td><a class="glightbox" href="https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Digikey" src="https://www.digikey.com/en/products/detail/espressif-systems/ESP32-S3-WROOM-1-N4/16162639" /></a></td>
-<td>Digikey, Jameco, etc.  Do not paste links directly into the table.  Use a <a href="#">link</a></td>
 </tr>
 <tr>
 <td>Code Examples</td>
 <td><a href="https://github.com/espressif/esp-idf/tree/master/examples">Code Examples</a></td>
-<td>url(s) for libraries on github or other sites related to the microcontroller and your planned peripherals</td>
 </tr>
 <tr>
 <td>External Resources URL(s)</td>
 <td><a href="https://esp32io.com/tutorials/esp32-code-structure">External Resources</a></td>
-<td>Search on Google and YouTube for other resources for each specific microcontroller.</td>
 </tr>
 <tr>
 <td>Unit cost</td>
 <td>$2.95</td>
-<td>Find on Digikey, Jameco, MPJA, or octopart</td>
 </tr>
 <tr>
 <td>Absolute Maximum Current for entire IC</td>
 <td>500mA</td>
-<td>Find in the microcontroller datasheet</td>
 </tr>
 <tr>
 <td>Supply Voltage Range</td>
 <td>3.0-3.6V</td>
-<td>Min / Nominal / Max / Absolute Max, as found in datasheet</td>
 </tr>
 <tr>
-<td>Maximum GPIO current <br> (per pin)</td>
+<td>Maximum GPIO current (per pin)</td>
 <td>40mA</td>
-<td>as found in datasheet</td>
 </tr>
 <tr>
 <td>Supports External Interrupts?</td>
 <td>Yes</td>
-<td>as found in datasheet</td>
 </tr>
 <tr>
 <td>Required Programming Hardware, Cost, URL</td>
 <td>None needed, ESP32-S3 is programmable through USB OTG</td>
-<td>as found in datasheet</td>
 </tr>
 </tbody>
 </table>
@@ -762,7 +880,7 @@
 <td>GPIO43 ~ GPIO44, GPIO17 ~ GPIO18</td>
 </tr>
 <tr>
-<td>external SPI*</td>
+<td>External SPI</td>
 <td>4</td>
 <td>0</td>
 <td>N/A</td>
@@ -777,25 +895,25 @@
 <td>GPIO</td>
 <td>45</td>
 <td>5</td>
-<td>?</td>
+<td>GPIO35-40</td>
 </tr>
 <tr>
 <td>ADC</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
+<td>2</td>
+<td>0</td>
+<td>N/A</td>
 </tr>
 <tr>
 <td>LED PWM</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
+<td>5</td>
+<td>5</td>
+<td>GPIO 17, 18, 8, 19, 20</td>
 </tr>
 <tr>
 <td>Motor PWM</td>
-<td>?</td>
-<td>?</td>
-<td>?</td>
+<td>0</td>
+<td>0</td>
+<td>N/A</td>
 </tr>
 <tr>
 <td>USB Programmer</td>
