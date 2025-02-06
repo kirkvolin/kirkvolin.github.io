@@ -56,7 +56,7 @@ Because of it's lower minimum input voltage of 4.5V, it enables the use of USB a
 |:----------:|:--------------------------------------------------------------------------------------------:|:----------------------------------------:|
 |Onboard Battery |Portability | Need backup batteries/charger|
 |![Battery](image)| Relatively easy to implement | Would increase board size significantly or require separate board for power|
-|[Digikey](https://www.digikey.com/en/products/detail/amphenol-cs-fci/10118193-0001LF/2785388)|| Much more expensive to implement |
+|[Digikey](https://www.digikey.com/en/products/detail/sparkfun-electronics/PRT-12895/5271298)|| Much more expensive to implement |
 ||||
 
 For powering this subsystem, I feel that versatility is important. Because USB is already required to program the ESP32 chip, I will design the circuit board so that it can be powered from either the USB connector or a separate 5.5x2.5mm barrel jack which is a common standard that my teammates and I already have cables for through the Robotics 1 and 2 courses through the Robotics 1 and 2 courses.
