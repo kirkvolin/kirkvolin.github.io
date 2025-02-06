@@ -2,10 +2,13 @@
 title: Component Selection
 ---
 
+## Team Role
 
-# Major Component Selection
+My role in the team is the bidirection internet communication subsystem using MQTT protocol. For this subsystem, I will be using an ESP32-S3-WROOM-1-N4 surface mounted on a custom PCB. This subsystem will include UART to communicate with the sensor, actuator and human interface subsystems. The UART connection for human interface will be included for debugging and redundancy, as we are planning implementation of a wireless interface device which would communicate over the MQTT protocol. With this implementation, my device would be responsible for receiving and sending data over MQTT with the humnan interface device, and sending and receiving data from the senor and actuator subsystems. The communications will be used to control the speed and direction of a metal marble on a track through the use of copper coils to demonstrate magnetism, and sensor data received will provide position and velocity information to the interface device.
 
-## Power Regulator
+## Component Selection - Bidirectional Internet Communication
+
+### Power Regulator
 
 | Solution 1  | Pros                                                                                        | Cons                                      |
 |:-----------:|:-------------------------------------------------------------------------------------------:|:-----------------------------------------:|
@@ -34,18 +37,18 @@ title: Component Selection
 |![LM2676S-3.3](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/Component%20Selection/LM2595S-3.3.png?raw=true)| Large footprint make it easy to handle | More expensive than another option |
 |[Digikey](https://www.digikey.com/en/products/detail/texas-instruments/LM2595S-3-3-NOPB/363698) |Exceeds amperage requirement peak of 500mA for ESP32, but not as excessively as other options available| Larger footprint takes up more space on PCB|
 
-### Selection
+#### Selection
 
 For a power regulator, the LM2676S-3.3 seems to be the optimal solution. It offers a good combination of price, usability, and versatility.
 Because of it's lower minimum input voltage of 4.5V, it enables the use of USB as a source of power compared to the LM2675M and LM2676S which wouldn't be able to accomplish this due to their minimum requirements of 6.5V and 8V respectively. The regulator's size of the TO263CA standard will also be much easier to manipulate and place for surface mount hand soldering.
 
-### Application
+#### Application
 ![Typical Application](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/Component%20Selection/LM2595S%20Typical%20Application.png?raw=true)
 ![Buck Regulator](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/Component%20Selection/LM2595S%20Buck%20Regulator.png?raw=true)
-### Footprint
+#### Footprint
 ![Footprint](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/Component%20Selection/LM2595S%20Package.png?raw=true)
 
-## Power Input
+### Power Input
 
 |Solution 1 | Pros                                                                                          |Cons                                      |
 |:----------:|:--------------------------------------------------------------------------------------------:|:----------------------------------------:|
@@ -67,11 +70,11 @@ Because of it's lower minimum input voltage of 4.5V, it enables the use of USB a
 |[Digikey](https://www.digikey.com/en/products/detail/sparkfun-electronics/PRT-12895/5271298)|| Much more expensive to implement |
 ||||
 
-### Selection
+#### Selection
 
 For powering this subsystem, I feel that versatility is important. Because USB is already required to program the ESP32 chip, I will design the circuit board so that it can be powered from either the USB connector or a separate 5.5x2.5mm barrel jack which is a common standard that my teammates and I already have cables for through the Robotics 1 and 2 courses through the Robotics 1 and 2 courses.
 
-## ESP 32 
+### ESP 32 
 
 | ESP Info                                      | Answer |
 | --------------------------------------------- | ------ |
@@ -89,7 +92,7 @@ For powering this subsystem, I feel that versatility is important. Because USB i
 | Supports External Interrupts?                 | Yes      |
 | Required Programming Hardware, Cost, URL      | None needed, ESP32-S3 is programmable through USB OTG|
 
-### Pin Requirements
+#### Pin Requirements
 
 | Module         | # Available | Needed | Associated Pins (or * for any) |
 | -------------- | ----------- | ------ | ------------------------------ |
@@ -104,10 +107,24 @@ For powering this subsystem, I feel that versatility is important. Because USB i
 | Motor PWM      | 0           | 0      | N/A                            |
 | USB Programmer | 1           | 1      | GPIO19 ~ GPIO20                |
 
-### Pinout
+#### Pinout
 ![Pinout](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/ESP32%20Pinout.png?raw=true)
 ![Pin Table 1](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/ESP32%20Pin%20Definitions%201.png?raw=true)
 ![Pin Table 2](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/ESP32%20Pin%20Definitions%202.png?raw=true)
 
-### Footprint
+#### Footprint
 ![Footprint](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/ESP32%20Pin%20Dimensions.png?raw=true)
+
+#### USB OTG
+
+![USB OTG](Link)
+
+#### UART
+
+![UART](Link)
+
+#### LED PWM
+
+![LED](Link)
+
+
