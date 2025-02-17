@@ -2,22 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://kirkvolin.github.io/</loc>
-         <lastmod>2025-02-06</lastmod>
+         <lastmod>2025-02-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kirkvolin.github.io/EGR314%20Project/Block_Diagram/</loc>
-         <lastmod>2025-02-06</lastmod>
+         <lastmod>2025-02-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kirkvolin.github.io/EGR314%20Project/Component_Selection/</loc>
-         <lastmod>2025-02-06</lastmod>
+         <lastmod>2025-02-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kirkvolin.github.io/static/node_modules/mathjax/</loc>
-         <lastmod>2025-02-06</lastmod>
+         <lastmod>2025-02-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
