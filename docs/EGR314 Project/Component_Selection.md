@@ -39,7 +39,7 @@ My role in the team is the bidirection internet communication subsystem using MQ
 
 #### Selection
 
-For a power regulator, the LM2676S-3.3 seems to be the optimal solution. It offers a good combination of price, usability, and versatility.
+For a power regulator, the LM2595S seems to be the optimal solution. It offers a good combination of price, usability, and versatility.
 Because of it's lower minimum input voltage of 4.5V, it enables the use of USB as a source of power compared to the LM2675M and LM2676S which wouldn't be able to accomplish this due to their minimum requirements of 6.5V and 8V respectively. The regulator's size of the TO263CA standard will also be much easier to manipulate and place for surface mount hand soldering.
 
 #### Application
