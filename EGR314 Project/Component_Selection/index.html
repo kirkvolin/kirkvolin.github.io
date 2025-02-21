@@ -18,6 +18,8 @@
         <link rel="prev" href="../Block_Diagram/">
       
       
+        <link rel="next" href="../Schematic_Design/">
+      
       
       <link rel="icon" href="../../static/logo.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.4.0">
@@ -317,6 +319,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
@@ -496,6 +500,31 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-components" class="md-nav__link">
+    General Components
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#all-surface-mount-components-such-as-resistors-capacitors-etc-are-planned-to-use-1206-standard-for-ease-of-handling-and-soldering" class="md-nav__link">
+    All surface mount components such as resistors, capacitors, etc. are planned to use 1206 standard for ease of handling and soldering.
+  </a>
+  
+    <nav class="md-nav" aria-label="All surface mount components such as resistors, capacitors, etc. are planned to use 1206 standard for ease of handling and soldering.">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#pinout" class="md-nav__link">
     Pinout
@@ -535,16 +564,31 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Schematic_Design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Schematic Design
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -665,6 +709,31 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-components" class="md-nav__link">
+    General Components
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#all-surface-mount-components-such-as-resistors-capacitors-etc-are-planned-to-use-1206-standard-for-ease-of-handling-and-soldering" class="md-nav__link">
+    All surface mount components such as resistors, capacitors, etc. are planned to use 1206 standard for ease of handling and soldering.
+  </a>
+  
+    <nav class="md-nav" aria-label="All surface mount components such as resistors, capacitors, etc. are planned to use 1206 standard for ease of handling and soldering.">
+      <ul class="md-nav__list">
+        
           <li class="md-nav__item">
   <a href="#pinout" class="md-nav__link">
     Pinout
@@ -704,11 +773,6 @@
     </nav>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
     </ul>
   
@@ -732,8 +796,6 @@
   
   
 
-
-  <h1>Component Selection</h1>
 
 <h2 id="team-role">Team Role</h2>
 <p>My role in the team is the bidirection internet communication subsystem using MQTT protocol. For this subsystem, I will be using an ESP32-S3-WROOM-1-N4 surface mounted on a custom PCB. This subsystem will include UART to communicate with the sensor, actuator and human interface subsystems. The UART connection for human interface will be included for debugging and redundancy, as we are planning implementation of a wireless interface device which would communicate over the MQTT protocol. With this implementation, my device would be responsible for receiving and sending data over MQTT with the human interface device, and sending and receiving data from the senor and actuator subsystems. The communications will be used to control the speed and direction of a metal marble on a track through the use of copper coils to demonstrate magnetism, and sensor data received will provide position and velocity information to the interface device.</p>
@@ -1093,6 +1155,9 @@ Because of it's lower minimum input voltage of 4.5V, it enables the use of USB a
 </tr>
 </tbody>
 </table>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD:docs/Component_Selection.md</p>
+<h2 id="general-components">General Components</h2>
+<h1 id="all-surface-mount-components-such-as-resistors-capacitors-etc-are-planned-to-use-1206-standard-for-ease-of-handling-and-soldering">All surface mount components such as resistors, capacitors, etc. are planned to use 1206 standard for ease of handling and soldering.</h1>
 <h4 id="pinout">Pinout</h4>
 <p><a class="glightbox" href="https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/ESP32%20Pinout.png?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Pinout" src="https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/ESP32%20Pinout.png?raw=true" /></a>
 <a class="glightbox" href="https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/ESP32%20Pin%20Definitions%201.png?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Pin Table 1" src="https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/ESP32%20Pin%20Definitions%201.png?raw=true" /></a>
@@ -1107,6 +1172,21 @@ Because of it's lower minimum input voltage of 4.5V, it enables the use of USB a
 <h4 id="led-pwm">LED PWM</h4>
 <p><a class="glightbox" href="https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/LED%201.png?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="LED" src="https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/LED%201.png?raw=true" /></a>
 <a class="glightbox" href="https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/LED%202.png?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="LED2" src="https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/LED%202.png?raw=true" /></a></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>56b5354d244edcf08b1165dce53776d906e554c3:docs/EGR314 Project/Component_Selection.md</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 
 
 
@@ -1149,6 +1229,22 @@ Because of it's lower minimum input voltage of 4.5V, it enables the use of USB a
             </div>
           </a>
         
+        
+          
+          <a href="../Schematic_Design/" class="md-footer__link md-footer__link--next" aria-label="Next: Schematic Design" rel="next">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Schematic Design
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
         
       </nav>
     
