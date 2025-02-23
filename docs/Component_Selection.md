@@ -110,8 +110,8 @@ For powering this subsystem, I feel that versatility is important. Because USB i
 
 ## General Components
 
-All surface mount components such as resistors, capacitors, etc. are planned to use 1206 standard for ease of handling and soldering.
-=======
+All surface mount components such as resistors, capacitors, etc. are planned to use 0805 standard for ease of handling and soldering.
+
 #### Pinout
 ![Pinout](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/ESP32%20Pinout.png?raw=true)
 ![Pin Table 1](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/ESP32%20Pin%20Definitions%201.png?raw=true)
