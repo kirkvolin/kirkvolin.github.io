@@ -107,7 +107,7 @@ For powering this subsystem, I feel that versatility is important. Because USB i
 | Motor PWM      | 0           | 0      | N/A                            |
 | USB Programmer | 1           | 1      | GPIO19 ~ GPIO20                |
 
-<<<<<<< HEAD:docs/Component_Selection.md
+
 ## General Components
 
 All surface mount components such as resistors, capacitors, etc. are planned to use 1206 standard for ease of handling and soldering.
