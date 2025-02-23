@@ -135,4 +135,3 @@ All surface mount components such as resistors, capacitors, etc. are planned to 
 ![LED2](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/LED%202.png?raw=true)
 
 
->>>>>>> 56b5354d244edcf08b1165dce53776d906e554c3:docs/EGR314 Project/Component_Selection.md
