@@ -27,6 +27,10 @@ theme:
 #    - navigation.expand
 #    - navigation.instant # doesn't work that well
 
+navbar:
+  - text: "Team Website"
+  href: https://asu-egr314-2025-s-310.github.io/
+
 markdown_extensions:
   - attr_list #add attributes using curly brackets to images, see https://squidfunk.github.io/mkdocs-material/reference/images/
   - md_in_html # see https://squidfunk.github.io/mkdocs-material/reference/images/
