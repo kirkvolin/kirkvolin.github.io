@@ -5,7 +5,7 @@ tags:
 - tag2
 ---
 
-|[Click Here to Return to Team Website](https://www.digikey.com/en/products/detail/umw/LM2576HVS-3-3/16705917)
+[Click Here to Return to Team Website](https://www.digikey.com/en/products/detail/umw/LM2576HVS-3-3/16705917)
 
 ## Hello! My name is Kirk Volin
 
