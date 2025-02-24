@@ -2,6 +2,11 @@ site_name: Kirk Volin Individual Report
 site_url: https://kirkvolin.github.io/
 repo_url: https://github.com/kirkvolin/kirkvolin.github.io
 edit_uri: https://github.com/kirkvolin/kirkvolin.github.io/blob/main/docs/index.md
+
+nav:
+  - External Link: 
+      - "Team Website": https://asu-egr314-2025-s-310.github.io/
+
 theme:
   name: material
   custom_dir: custom_theme/
@@ -26,10 +31,6 @@ theme:
 #    - navigation.sections
 #    - navigation.expand
 #    - navigation.instant # doesn't work that well
-
-navbar:
-  - text: "Team Website"
-  href: https://asu-egr314-2025-s-310.github.io/
 
 markdown_extensions:
   - attr_list #add attributes using curly brackets to images, see https://squidfunk.github.io/mkdocs-material/reference/images/
