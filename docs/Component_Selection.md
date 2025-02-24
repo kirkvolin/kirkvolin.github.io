@@ -107,11 +107,6 @@ For powering this subsystem, I feel that versatility is important. Because USB i
 | Motor PWM      | 0           | 0      | N/A                            |
 | USB Programmer | 1           | 1      | GPIO19 ~ GPIO20                |
 
-<<<<<<< HEAD:docs/Component_Selection.md
-## General Components
-
-All surface mount components such as resistors, capacitors, etc. are planned to use 1206 standard for ease of handling and soldering.
-=======
 #### Pinout
 ![Pinout](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/ESP32%20Pinout.png?raw=true)
 ![Pin Table 1](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/ESP32%20Pin%20Definitions%201.png?raw=true)
@@ -135,4 +130,8 @@ All surface mount components such as resistors, capacitors, etc. are planned to 
 ![LED2](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/LED%202.png?raw=true)
 
 
->>>>>>> 56b5354d244edcf08b1165dce53776d906e554c3:docs/EGR314 Project/Component_Selection.md
+## General Components
+
+All surface mount components such as resistors, capacitors, etc. are planned to use 0805 standard for ease of handling and soldering.
+
+
