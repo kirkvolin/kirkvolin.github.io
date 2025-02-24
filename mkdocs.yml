@@ -2,6 +2,14 @@ site_name: Kirk Volin Individual Report
 site_url: https://kirkvolin.github.io/
 repo_url: https://github.com/kirkvolin/kirkvolin.github.io
 edit_uri: https://github.com/kirkvolin/kirkvolin.github.io/blob/main/docs/index.md
+
+nav:
+  - Home: index.md
+  - Block Diagram: Block_Diagram.md
+  - Component Selection: Component_Selection.md
+  - Schematic Design: Schematic_Design.md
+  - Team Website:
+      - "Team Website": https://asu-egr314-2025-s-310.github.io/
 theme:
   name: material
   custom_dir: custom_theme/
@@ -23,6 +31,9 @@ theme:
     - navigation.prune
     - content.action.edit
     - navigation.footer
+    - External Link: 
+        - "Team Website": https://asu-egr314-2025-s-310.github.io/
+
 #    - navigation.sections
 #    - navigation.expand
 #    - navigation.instant # doesn't work that well
