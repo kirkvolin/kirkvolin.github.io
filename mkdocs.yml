@@ -8,8 +8,8 @@ nav:
   - Block Diagram: Block_Diagram.md
   - Component Selection: Component_Selection.md
   - Schematic Design: Schematic_Design.md
-  - External Links:
-      - "Team Website": https://github.com/kirkvolin/kirkvolin.github.io
+  - Team Website:
+      - "Team Website": https://asu-egr314-2025-s-310.github.io/
 theme:
   name: material
   custom_dir: custom_theme/
