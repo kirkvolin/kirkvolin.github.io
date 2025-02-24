@@ -5,7 +5,6 @@ tags:
 - tag2
 ---
 
-## [Click Here to Return to Team Website](https://asu-egr314-2025-s-310.github.io/)
 
 ## Hello! My name is Kirk Volin
 
