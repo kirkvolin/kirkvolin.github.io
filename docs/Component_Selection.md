@@ -130,7 +130,7 @@ For powering this subsystem, I feel that versatility is important. Because USB i
 ![LED2](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/ESP32/LED%202.png?raw=true)
 
 
-## General Components
+### General Components
 
 All surface mount components such as resistors, capacitors, etc. are planned to use 0805 standard for ease of handling and soldering.
 
