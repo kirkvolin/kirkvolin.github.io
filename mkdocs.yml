@@ -8,6 +8,7 @@ nav:
   - Block Diagram: Block_Diagram.md
   - Component Selection: Component_Selection.md
   - Schematic Design: Schematic_Design.md
+  - BOM and Hardware Order: Hardware_Order.md
   - Team Website:
       - "Team Website": https://asu-egr314-2025-s-310.github.io/
 theme:
