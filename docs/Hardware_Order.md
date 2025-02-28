@@ -4,7 +4,8 @@ title: BOM and Hardware Order
 
 ## Bill of Materials: Bidirectional Internet Communication
 
+![Bill of Materials](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/Purchase%20Order%20and%20BOM/BOM.png?raw=true)
 
-![Bill of Materials]()
+## Hardware Order
 
-![Hardware Order]()
+![Hardware Order](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/Purchase%20Order%20and%20BOM/Purchase_Order.png?raw=true)
