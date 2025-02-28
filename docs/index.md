@@ -16,3 +16,4 @@ This site is intended as a repository for my work in the EGR 314 project class t
 
 This is a work in progress and will be continually updated as we work on the project. 
 
+Link to return to [Team 310's Website](https://asu-egr314-2025-s-310.github.io/)
