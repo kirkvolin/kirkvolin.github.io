@@ -16,6 +16,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://kirkvolin.github.io/Hardware_Order/</loc>
+         <lastmod>2025-02-28</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://kirkvolin.github.io/Schematic_Design/</loc>
          <lastmod>2025-02-28</lastmod>
          <changefreq>daily</changefreq>
