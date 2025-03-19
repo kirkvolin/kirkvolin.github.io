@@ -57,11 +57,11 @@ title: API
 
 Error Types:
 
-0: Not connected to WiFi
-1: Data Overflow Received
-2: Unknown Address Received
-3: Invalid Message Received
-4: No Communication Received (in a specified time range, ex. 1 minute)
+0: Not connected to WiFi  
+1: Data Overflow Received  
+2: Unknown Address Received  
+3: Invalid Message Received  
+4: No Communication Received (in a specified time range, ex. 1 minute)  
 
 
 
