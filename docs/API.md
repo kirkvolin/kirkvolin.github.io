@@ -2,7 +2,7 @@
 title: API
 ---
 
-
+### By
 
 ## Team Definitions
 
@@ -26,7 +26,7 @@ title: API
 #### Message Type 14 - (Master System Reset)
 ##### Broadcast message from remote user to trigger reset on all systems
 
-|  |  Byte 1     |  
+|  |  Byte 1-3     |  
 | -----------| ----------- |
 |Variable Name| masterReset  | 
 |Variable Type| char  | 
@@ -36,24 +36,24 @@ title: API
 #### Message Type 13 - MQTT Signal Verification
 ##### Message sent to HMI to display MQTT signal quality
 
-|  |  Byte 1     | 
-| -----------| ----------- |
-|Variable Name| mqttSignal  | 
-|Variable Type| uint8_t  | 
-|Min| 0  |
-|Max| 100 | 
-|Example| 34 |  
+|  |  Byte 1 - 4    |  Byte 5 |
+| -----------| ----------- | -- |
+|Variable Name| mqttSignal  | signalStrength |
+|Variable Type| char  | uint8_t | 
+|Min| wifi | 0  |
+|Max| wifi |  100 | 
+|Example| wifi | 34 |  
 
 #### Message Type 15 - MQTT Error State
 ##### Message sent to HMI to display error state in HMI
 
-|  |  Byte 1     | Byte 2| 
+|  |  Byte 1 - 5     | Byte 6| 
 | -----------| ----------- | -- |
-|Variable Name| mqttError  | uint8_t |
-|Variable Type| uint8_t  | Address of Error |
-|Min | 0  | Z (Null letter) |
-|Max | 5 | Address of Error |
-|Example| 3 |  K |
+|Variable Name| mqttError  | errorAddress |
+|Variable Type| char  | uint8_t |
+|Min | wifix  | 0 |
+|Max | wifix | 5 |
+|Example| wifix |  3 |
 
 Error Types:
 
