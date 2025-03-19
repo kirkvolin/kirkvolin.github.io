@@ -77,13 +77,13 @@ Error Types:
 ##### Sensor/Motor/HMI data to be displayed on MQTT
 
 
-|  |  Byte 1     | Byte 2 | Byte 3 |
-| -----------| ----------- | -- | -- |
-|Variable Name| data  | Motor_Data   | Sensor_Data  |
-|Variable Type| char  |  uint8_t   | uint8_t   |
-|Min| D  |    |   |
-|Max| D |     |   |
-|Example| D |      |   |
+|  |  Byte 1     | Byte 2 | 
+| -----------| ----------- | -- | 
+|Variable Name| data  | Motor_Speed   | 
+|Variable Type| char  |  uint8_t   | 
+|Min| NKD  |  0  |   
+|Max| NKD |  3   |   
+|Example| NKD |   2   |  
 
 HMI Data includes user's inputted control value
 Motor Data includes motor switching speeds
@@ -95,7 +95,7 @@ Sensor Data includes sensor trigger speeds
 |  |  Byte 1 - 3    | Byte 4 | Byte 5 |
 | -----------| ----------- | -- | -- |
 |Variable Name| Error  | Error_Address   | Error_Message  |
-|Variable Type| char  |  CHAR   | uint8_t   |
+|Variable Type| char  |  char   | uint8_t   |
 |Min| ERR  |  A  | 0  |
 |Max| ERR |  Z   |  30 |
 |Example| ERR |   H   |  5 |
