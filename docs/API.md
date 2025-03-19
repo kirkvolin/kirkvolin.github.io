@@ -2,7 +2,7 @@
 title: API
 ---
 
-### By
+
 
 ## Team Definitions
 
@@ -10,8 +10,8 @@ title: API
 
 | Type |  Byte  |
 | -----------| ----------- |
-| Start |   |
-| Stop |  |
+| Start | AZ  |
+| Stop | YB |
 
 ### Team Addresses
 
@@ -21,39 +21,45 @@ title: API
 |Evan Skinner| E |
 |Kirk Volin| K |
 |Hunter Hassebroek| H |
+| Broadcast | X| 
+
+##### Bytes 1-3 in messages are used to declare the message type
+##### Bytes 4 - n show message states/data
 
 ### MQTT Sent Messages
 #### Message Type 14 - (Master System Reset)
 ##### Broadcast message from remote user to trigger reset on all systems
 
-|  |  Byte 1-3     |  
-| -----------| ----------- |
-|Variable Name| masterReset  | 
-|Variable Type| char  | 
-|Value| RST  |
-|Example| RST |
+|  |  Byte 1-3     |  Byte 4 |
+| -----------| ----------- | --|
+|Variable Name| masterReset  | resetValue | 
+|Variable Type| char  | uint8_t |
+|Min| RST  | 0 |
+|Max| RST  | 1 |
+|Example| RST | 1 |
+
 
 #### Message Type 13 - MQTT Signal Verification
 ##### Message sent to HMI to display MQTT signal quality
 
-|  |  Byte 1 - 4    |  Byte 5 |
+|  |  Byte 1 - 3    |  Byte 4 |
 | -----------| ----------- | -- |
 |Variable Name| mqttSignal  | signalStrength |
 |Variable Type| char  | uint8_t | 
-|Min| wifi | 0  |
-|Max| wifi |  100 | 
-|Example| wifi | 34 |  
+|Min| KHW | 0  |
+|Max| KHW |  100 | 
+|Example| KHW | 34 |  
 
 #### Message Type 15 - MQTT Error State
 ##### Message sent to HMI to display error state in HMI
 
-|  |  Byte 1 - 5     | Byte 6| 
+|  |  Byte 1 - 3     | Byte 4| 
 | -----------| ----------- | -- |
-|Variable Name| mqttError  | errorAddress |
+|Variable Name| mqttError  | errorValue |
 |Variable Type| char  | uint8_t |
-|Min | wifix  | 0 |
-|Max | wifix | 5 |
-|Example| wifix |  3 |
+|Min | KHX  | 0 |
+|Max | KHX | 5 |
+|Example| KHX |  3 |
 
 Error Types:
 
@@ -73,11 +79,11 @@ Error Types:
 
 |  |  Byte 1     | Byte 2 | Byte 3 |
 | -----------| ----------- | -- | -- |
-|Variable Name| HMI_Data  | Motor_Data   | Sensor_Data  |
-|Variable Type| uint8_t  |  uint8_t   | uint8_t   |
-|Min| 0  |    |   |
-|Max| 3 |     |   |
-|Example| 2 |      |   |
+|Variable Name| data  | Motor_Data   | Sensor_Data  |
+|Variable Type| char  |  uint8_t   | uint8_t   |
+|Min| D  |    |   |
+|Max| D |     |   |
+|Example| D |      |   |
 
 HMI Data includes user's inputted control value
 Motor Data includes motor switching speeds
@@ -86,12 +92,12 @@ Sensor Data includes sensor trigger speeds
 #### Message Type 3, 8, 20 - Subsystem Error 
 ##### Error State in a Specific Subsystem, displayed over MQTT for debugging purposes
 
-|  |  Byte 1     | Byte 2 | Byte 3 |
+|  |  Byte 1 - 3    | Byte 4 | Byte 5 |
 | -----------| ----------- | -- | -- |
-|Variable Name| Error_Type  | Address Received   |   |
-|Variable Type| uint8_t  |  uint8_t   | uint8_t   |
-|Min| 0  |  Z (Null Letter)  |   |
-|Max| 50 |  Address of Error   |   |
-|Example| 12 |   E   |   |
+|Variable Name| Error  | Error_Address   | Error_Message  |
+|Variable Type| char  |  CHAR   | uint8_t   |
+|Min| ERR  |  A  | 0  |
+|Max| ERR |  Z   |  30 |
+|Example| ERR |   H   |  5 |
 
 Error type received is specified in the subsystem that sent the error message.
