@@ -30,13 +30,13 @@ title: API
 #### Message Type 14 - (Master System Reset)
 ##### Broadcast message from remote user to trigger reset on all systems
 
-|  |  Byte 1-3     |  Byte 4 |
-| -----------| ----------- | --|
-|Variable Name| masterReset  | resetValue | 
+|  |  Byte 1-3     |  
+| -----------| ----------- | 
+|Variable Name| masterReset  | 
 |Variable Type| char  | uint8_t |
-|Min| RST  | 0 |
-|Max| RST  | 1 |
-|Example| RST | 1 |
+|Min| RST  | 
+|Max| RST  | 
+|Example| RST |
 
 
 #### Message Type 13 - MQTT Signal Verification
