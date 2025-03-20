@@ -100,4 +100,41 @@ Sensor Data includes sensor trigger speeds
 |Max| ERR |  Z   |  30 |
 |Example| ERR |   H   |  5 |
 
-Error type received is specified in the subsystem that sent the error message.
+Error type received is specified in the subsystem that sent the error message.  
+
+
+### Code Handling Process Flow (Received)
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+</script>
+
+```mermaid
+flowchart TD
+    A[UART Message Received] -->|Read Message| B(Parse Message into Array)
+    B --> C{Read Receiver Address}
+    C -->|For MQTT| D{Read Message Type} -->|System Data| G[Display Data Over MQTT] --> I[Send Data to HMI]
+    D -->|Error| J[Display Error on MQTT] --> K[Trash]
+    C -->|Not For MQTT| E{Compare to other Expected Receiver Addresses} -->|Unknown Address| H[Trash Message]
+    E-->|Known Address|L[Send Message over UART]
+  
+```
+
+### Code Handling Process Flow (Sent)
+
+```mermaid
+flowchart TD
+    A[Message to Send] -->|Determine Message Type| B{Determine Message Type}
+    B -->|Error State| C[Populate Array with KHX Identifier]
+    C --> D[Populate Array with Error Code] --> E[Send Message over UART]
+    B -->|Master Reset|F[Populate Array with RST Identifier]
+    F --> G[Send Message Over UART]
+
+    B -->|MQTT Signal Verification| H[Populate Array with KHW Identifier]
+    H --> I[Populate Array with Signal Strength]
+    I-->J[Send Message Over UART]
+
+  
+  
+```
