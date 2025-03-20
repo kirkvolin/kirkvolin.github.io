@@ -103,7 +103,7 @@ Sensor Data includes sensor trigger speeds
 Error type received is specified in the subsystem that sent the error message.  
 
 
-### Code Handling Process Flow (Received)
+### Message Handling Process Flow (Received)
 
 <script type="module">
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
@@ -121,7 +121,7 @@ flowchart TD
   
 ```
 
-### Code Handling Process Flow (Sent)
+### Message Handling Process Flow (Sent)
 
 ```mermaid
 flowchart TD
