@@ -679,6 +679,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#code-handling-process-flow-received" class="md-nav__link">
+    Code Handling Process Flow (Received)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-handling-process-flow-sent" class="md-nav__link">
+    Code Handling Process Flow (Sent)
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -920,6 +934,20 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-handling-process-flow-received" class="md-nav__link">
+    Code Handling Process Flow (Received)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-handling-process-flow-sent" class="md-nav__link">
+    Code Handling Process Flow (Sent)
+  </a>
   
 </li>
         
@@ -1207,7 +1235,35 @@ Sensor Data includes sensor trigger speeds</p>
 </tr>
 </tbody>
 </table>
-<p>Error type received is specified in the subsystem that sent the error message.</p>
+<p>Error type received is specified in the subsystem that sent the error message.  </p>
+<h3 id="code-handling-process-flow-received">Code Handling Process Flow (Received)</h3>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+</script>
+
+<pre class="mermaid"><code>flowchart TD
+    A[UART Message Received] --&gt;|Read Message| B(Parse Message into Array)
+    B --&gt; C{Read Receiver Address}
+    C --&gt;|For MQTT| D{Read Message Type} --&gt;|System Data| G[Display Data Over MQTT] --&gt; I[Send Data to HMI]
+    D --&gt;|Error| J[Display Error on MQTT] --&gt; K[Trash]
+    C --&gt;|Not For MQTT| E{Compare to other Expected Receiver Addresses} --&gt;|Unknown Address| H[Trash Message]
+    E--&gt;|Known Address|L[Send Message over UART]
+</code></pre>
+<h3 id="code-handling-process-flow-sent">Code Handling Process Flow (Sent)</h3>
+<pre class="mermaid"><code>flowchart TD
+    A[Message to Send] --&gt;|Determine Message Type| B{Determine Message Type}
+    B --&gt;|Error State| C[Populate Array with KHX Identifier]
+    C --&gt; D[Populate Array with Error Code] --&gt; E[Send Message over UART]
+    B --&gt;|Master Reset|F[Populate Array with RST Identifier]
+    F --&gt; G[Send Message Over UART]
+
+    B --&gt;|MQTT Signal Verification| H[Populate Array with KHW Identifier]
+    H --&gt; I[Populate Array with Signal Strength]
+    I--&gt;J[Send Message Over UART]
+
+
+</code></pre>
 
 
 
