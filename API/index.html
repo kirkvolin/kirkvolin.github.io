@@ -1243,7 +1243,7 @@ Sensor Data includes sensor trigger speeds</p>
 </script>
 
 <pre class="mermaid"><code>flowchart TD
-    A[UART Message Received] --&gt;|Read Message| B(Parse Message into Array)
+    A[UART Message Received] --&gt; B(Parse Message into Array)
     B --&gt; C{Read Receiver Address}
     C --&gt;|For MQTT| D{Read Message Type} --&gt;|System Data| G[Display Data Over MQTT] --&gt; I[Send Data to HMI]
     D --&gt;|Error| J[Display Error on MQTT] --&gt; K[Trash]
@@ -1252,7 +1252,7 @@ Sensor Data includes sensor trigger speeds</p>
 </code></pre>
 <h3 id="message-handling-process-flow-sent">Message Handling Process Flow (Sent)</h3>
 <pre class="mermaid"><code>flowchart TD
-    A[Message to Send] --&gt;|Determine Message Type| B{Determine Message Type}
+    A[Message to Send] --&gt; B{Determine Message Type}
     B --&gt;|Error State| C[Populate Array with KHX Identifier]
     C --&gt; D[Populate Array with Error Code] --&gt; E[Send Message over UART]
     B --&gt;|Master Reset|F[Populate Array with RST Identifier]
