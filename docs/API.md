@@ -112,7 +112,7 @@ Error type received is specified in the subsystem that sent the error message.
 
 ```mermaid
 flowchart TD
-    A[UART Message Received] -->|Read Message| B(Parse Message into Array)
+    A[UART Message Received] --> B(Parse Message into Array)
     B --> C{Read Receiver Address}
     C -->|For MQTT| D{Read Message Type} -->|System Data| G[Display Data Over MQTT] --> I[Send Data to HMI]
     D -->|Error| J[Display Error on MQTT] --> K[Trash]
@@ -125,7 +125,7 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    A[Message to Send] -->|Determine Message Type| B{Determine Message Type}
+    A[Message to Send] --> B{Determine Message Type}
     B -->|Error State| C[Populate Array with KHX Identifier]
     C --> D[Populate Array with Error Code] --> E[Send Message over UART]
     B -->|Master Reset|F[Populate Array with RST Identifier]
