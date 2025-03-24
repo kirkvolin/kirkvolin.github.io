@@ -1199,38 +1199,32 @@ Sensor Data includes sensor trigger speeds</p>
 <th></th>
 <th>Byte 1 - 3</th>
 <th>Byte 4</th>
-<th>Byte 5</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Variable Name</td>
 <td>Error</td>
-<td>Error_Address</td>
 <td>Error_Message</td>
 </tr>
 <tr>
 <td>Variable Type</td>
-<td>char</td>
 <td>char</td>
 <td>uint8_t</td>
 </tr>
 <tr>
 <td>Min</td>
 <td>ERR</td>
-<td>A</td>
 <td>0</td>
 </tr>
 <tr>
 <td>Max</td>
 <td>ERR</td>
-<td>Z</td>
 <td>30</td>
 </tr>
 <tr>
 <td>Example</td>
 <td>ERR</td>
-<td>H</td>
 <td>5</td>
 </tr>
 </tbody>
@@ -1246,7 +1240,7 @@ Sensor Data includes sensor trigger speeds</p>
     A[UART Message Received] --&gt; B(Parse Message into Array)
     B --&gt; C{Read Receiver Address}
     C --&gt;|For MQTT| D{Read Message Type} --&gt;|System Data| G[Display Data Over MQTT] --&gt; I[Send Data to HMI]
-    D --&gt;|Error| J[Display Error on MQTT] --&gt; K[Trash]
+    D --&gt;|Error| J[Display Error on MQTT] --&gt; K[Send Error Message to HMI]
     C --&gt;|Not For MQTT| E{Compare to other Expected Receiver Addresses} --&gt;|Unknown Address| H[Trash Message]
     E--&gt;|Known Address|L[Send Message over UART]
 </code></pre>
