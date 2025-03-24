@@ -1239,7 +1239,7 @@ Sensor Data includes sensor trigger speeds</p>
 <pre class="mermaid"><code>flowchart TD
     A[UART Message Received] --&gt; B(Parse Message into Array)
     B --&gt; C{Read Receiver Address}
-    C --&gt;|For MQTT| D{Read Message Type} --&gt;|System Data| G[Display Data Over MQTT] --&gt; I[Send Data to HMI]
+    C --&gt;|For MQTT or Broadcast| D{Read Message Type} --&gt;|System Data| G[Display Data Over MQTT] --&gt; I[Send Data to HMI]
     D --&gt;|Error| J[Display Error on MQTT] --&gt; K[Send Error Message to HMI]
     C --&gt;|Not For MQTT| E{Compare to other Expected Receiver Addresses} --&gt;|Unknown Address| H[Trash Message]
     E--&gt;|Known Address|L[Send Message over UART]
