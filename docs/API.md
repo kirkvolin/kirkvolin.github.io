@@ -92,13 +92,13 @@ Sensor Data includes sensor trigger speeds
 #### Message Type 3, 8, 20 - Subsystem Error 
 ##### Error State in a Specific Subsystem, displayed over MQTT for debugging purposes
 
-|  |  Byte 1 - 3    | Byte 4 | Byte 5 |
-| -----------| ----------- | -- | -- |
-|Variable Name| Error  | Error_Address   | Error_Message  |
-|Variable Type| char  |  char   | uint8_t   |
-|Min| ERR  |  A  | 0  |
-|Max| ERR |  Z   |  30 |
-|Example| ERR |   H   |  5 |
+|  |  Byte 1 - 3    | Byte 4 | 
+| -----------| ----------- | -- | 
+|Variable Name| Error  | Error_Message  |
+|Variable Type| char    | uint8_t   |
+|Min| ERR   | 0  |
+|Max| ERR  |  30 |
+|Example| ERR    |  5 |
 
 Error type received is specified in the subsystem that sent the error message.  
 
@@ -115,7 +115,7 @@ flowchart TD
     A[UART Message Received] --> B(Parse Message into Array)
     B --> C{Read Receiver Address}
     C -->|For MQTT| D{Read Message Type} -->|System Data| G[Display Data Over MQTT] --> I[Send Data to HMI]
-    D -->|Error| J[Display Error on MQTT] --> K[Trash]
+    D -->|Error| J[Display Error on MQTT] --> K[Send Error Message to HMI]
     C -->|Not For MQTT| E{Compare to other Expected Receiver Addresses} -->|Unknown Address| H[Trash Message]
     E-->|Known Address|L[Send Message over UART]
   
