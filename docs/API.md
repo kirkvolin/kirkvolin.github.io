@@ -114,7 +114,7 @@ Error type received is specified in the subsystem that sent the error message.
 flowchart TD
     A[UART Message Received] --> B(Parse Message into Array)
     B --> C{Read Receiver Address}
-    C -->|For MQTT| D{Read Message Type} -->|System Data| G[Display Data Over MQTT] --> I[Send Data to HMI]
+    C -->|For MQTT or Broadcast| D{Read Message Type} -->|System Data| G[Display Data Over MQTT] --> I[Send Data to HMI]
     D -->|Error| J[Display Error on MQTT] --> K[Send Error Message to HMI]
     C -->|Not For MQTT| E{Compare to other Expected Receiver Addresses} -->|Unknown Address| H[Trash Message]
     E-->|Known Address|L[Send Message over UART]
