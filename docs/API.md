@@ -79,10 +79,9 @@ Error Types:
 3: Unexpected Message Sent to MQTT ID
 4: Unknown Error - Check Terminal for Further Details
 5: Unexpected Message Sent to Broadcast ID
-6: Max Message Length Exceeded With Prefix Detected
+6: Invalid Message Received Over MQTT
 7: Max Message Length Exceeded Without Prefix Detected
-8: Invalid Message Received Over MQTT
-9: Unknown Error Processing MQTT Message - Check Terminal for further Details
+8:  Unknown Error Processing MQTT Message - Check Terminal for further Details
 
 ### MQTT Received Messages
 
