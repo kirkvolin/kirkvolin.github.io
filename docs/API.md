@@ -23,25 +23,33 @@ title: API
 |Hunter Hassebroek| H |
 | Broadcast | X| 
 
-##### Bytes 1-3 in messages are used to declare the message type
-##### Bytes 4 - n show message states/data
+### Message Formatting 
+##### Excluding Prefix and Suffix (Start and Stop)
+
+##### Byte 1: Sender Address
+##### Byte 2: Receiver Address
+##### Byte 3: Data Type
+##### Bytes 4: Data
 ##### All messages are converted to UTF-8 for UART transmission
 
 ### MQTT Sent Messages
 #### Message Type 14 - (Master System Reset)
-##### Broadcast message from remote user to trigger reset on all systems
+- Broadcast message from remote user on MQTT to trigger reset on the system. 
+- If RST is sent to the MQTT SUB,  it will trigger this static message to reset all subsystems.
 
-|  |  Byte 1: Sender     |  Byte 2: Receiver | Byte 3-5: Data Type | 
-| -----------| ----------- | --| --| 
-|Variable Name| MQTT_ID  | HMI_ID| masterReset |
-|Variable Type| char  | char | char|
-|Min| K  | X | RST |
-|Max| K  | X | RST |
-|Example| K | X | RST |
+|  |  Byte 1: Sender     |  Byte 2: Receiver | Byte 3: Data Type | Byte 4: Data  
+| -----------| ----------- | --| --| -- |
+|Variable Name| MQTT_ID  | BROADCAST_ID| masterReset | resetState
+|Variable Type| char  | char | char| uint8_t | 
+|Min| K  | X | R | 1
+|Max| K  | X | R |1
+|Example| K | X | R | 1
 
 
 #### Message Type 13 - WiFi Signal Verification
-##### Message sent to HMI to display WiFi connection 
+- Message sent to HMI to display WiFi connection state.
+- A received state of 0 indicates no connection
+- A state of 1 indicates a stable WiFi connection
 
 
 |  |  Byte 1: Sender     |  Byte 2: Receiver | Byte 3: Data Type | Byte 4: Data |
@@ -58,23 +66,24 @@ title: API
 
 |  |  Byte 1: Sender     |  Byte 2: Receiver | Byte 3: Data Type | Byte 4: Data |
 | -----------| ----------- | -- | -- | -- |
-|Variable Name| MQTT_ID  | HMI_ID | error_type | error_data |
+|Variable Name| MQTT_ID  | HMI_ID | error_type | error_code |
 |Variable Type| char  | char | char | uint8_t |
-|Min| K  | H | X | 0 |
-|Max| K  | H | X | 5 |
-|Example| K | H | X | 3 |
-
-
+|Min| K  | H | F | 0 |
+|Max| K  | H | F | 9 |
+|Example| K | H | F | 3 |
 
 Error Types:
 
-0: Not connected to WiFi  
-1: Data Overflow Received  
+0: Invalid Sender ID
+1: Invalid Receiver ID
 2: Unknown Address Received  
-3: Invalid Message Received  
-4: No Communication Received (in a specified time range, ex. 1 minute)  
-
-
+3: Unexpected Message Sent to MQTT ID
+4: Unknown Error - Check Terminal for Further Details
+5: Unexpected Message Sent to Broadcast ID
+6: Max Message Length Exceeded With Prefix Detected
+7: Max Message Length Exceeded Without Prefix Detected
+8: Invalid Message Received Over MQTT
+9: Unknown Error Processing MQTT Message - Check Terminal for further Details
 
 ### MQTT Received Messages
 
@@ -91,19 +100,20 @@ Error Types:
 |Example| N | K | D | 2 |
 
 Actuator Data describes motor switching speeds in predefined settings
+- MQTT will update with this data then forward the message to the HMI subsystem
 
 #### Message Type 3, 8, 20 - Subsystem Error 
 ##### Error State in a Specific Subsystem, displayed over MQTT for debugging purposes
 
 |  |  Byte 1: Sender     |  Byte 2: Receiver | Byte 3-5: Error Type | Byte 6: Error Code |
 | -----------| ----------- | -- | -- | -- |
-|Variable Name| TEAM_ID  | BROADCAST_ID | error_type | wifi_data |
+|Variable Name| TEAM_ID  | BROADCAST_ID | error_type | error_code |
 |Variable Type| char  | char | char | uint8_t |
-|Min| A  | X | ERR | 0 |
-|Max| Z  | X | ERR | 20 |
-|Example| E | X | ERR | 5 |
+|Min| A  | X | F | 0 |
+|Max| Z  | X | F | 9 |
+|Example| E | X | F | 5 |
 
-Error type received is specified in the subsystem that sent the error message.  
+- Error type received is specified in the subsystem that sent the error message.  
 
 
 ### Message Handling Process Flow (Received)
