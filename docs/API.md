@@ -68,15 +68,14 @@ title: API
 | -----------| ----------- | -- | -- | -- |
 |Variable Name| MQTT_ID  | HMI_ID | error_type | error_code |
 |Variable Type| char  | char | char | uint8_t |
-|Min| K  | H | F | 0 |
+|Min| K  | H | F | 1 |
 |Max| K  | H | F | 9 |
 |Example| K | H | F | 3 |
 
 Error Types:
 
-0: Invalid Sender ID
-1: Invalid Receiver ID
-2: Unknown Address Received  
+1: Invalid Sender ID
+2: Invalid Receiver ID
 3: Unexpected Message Sent to MQTT ID
 4: Unknown Error - Check Terminal for Further Details
 5: Unexpected Message Sent to Broadcast ID
