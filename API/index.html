@@ -1216,14 +1216,17 @@
 </tbody>
 </table>
 <p>Error Types:</p>
-<p>1: Invalid Sender ID<br />
+<p>0: Unknown Error Occurred Handling MQTT Message - Check Terminal for Further Details
+1: Invalid Sender ID<br />
 2: Invalid Receiver ID<br />
-3: Unexpected Message Sent to MQTT ID<br />
-4: Unknown Error - Check Terminal for Further Details<br />
-5: Unexpected Message Sent to Broadcast ID<br />
-6: Invalid Message Received Over MQTT<br />
+3: Unexpected Message Type Sent to MQTT ID<br />
+4: Unknown Error Handling UART Message - Check Terminal for Further Details<br />
+5: Unexpected Message Type Sent to Broadcast ID<br />
+6: Max Message Length Exceeded, Prefix Detected
 7: Max Message Length Exceeded Without Prefix Detected<br />
-8:  Unknown Error Processing MQTT Message - Check Terminal for further Details</p>
+8: Invalid Command Received over MQTT
+9: Invalid Message Length Received from MQTT (3 Characters Expected)  <br />
+A: Data Message Out of Expected Range</p>
 <h3 id="mqtt-received-messages">MQTT Received Messages</h3>
 <h4 id="message-type-2-14-17-system-information">Message Type 2, 14, 17 - System Information</h4>
 <h5 id="sensormotorhmi-data-to-be-displayed-on-mqtt">Sensor/Motor/HMI data to be displayed on MQTT</h5>
