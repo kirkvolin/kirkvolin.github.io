@@ -82,7 +82,7 @@ Error Types:
 5: Unexpected Message Type Sent to Broadcast ID  
 6: Max Message Length Exceeded, Prefix Detected
 7: Max Message Length Exceeded Without Prefix Detected  
-8: Invalid Command Received over MQTT
+8: Invalid Command Received over MQTT  
 9: Invalid Message Length Received from MQTT (3 Characters Expected)    
 A: Data Message Out of Expected Range
 
