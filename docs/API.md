@@ -74,13 +74,13 @@ title: API
 
 Error Types:
 
-1: Invalid Sender ID
-2: Invalid Receiver ID
-3: Unexpected Message Sent to MQTT ID
-4: Unknown Error - Check Terminal for Further Details
-5: Unexpected Message Sent to Broadcast ID
-6: Invalid Message Received Over MQTT
-7: Max Message Length Exceeded Without Prefix Detected
+1: Invalid Sender ID  
+2: Invalid Receiver ID  
+3: Unexpected Message Sent to MQTT ID  
+4: Unknown Error - Check Terminal for Further Details  
+5: Unexpected Message Sent to Broadcast ID  
+6: Invalid Message Received Over MQTT  
+7: Max Message Length Exceeded Without Prefix Detected  
 8:  Unknown Error Processing MQTT Message - Check Terminal for further Details
 
 ### MQTT Received Messages
