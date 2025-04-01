@@ -33,7 +33,7 @@ title: API
 ##### All messages are converted to UTF-8 for UART transmission
 
 ### MQTT Sent Messages
-#### Message Type 14 - (Master System Reset)
+#### Message Type - Master System Reset
 - Broadcast message from remote user on MQTT to trigger reset on the system. 
 - If RST is sent to the MQTT SUB,  it will trigger this static message to reset all subsystems.
 
@@ -46,7 +46,7 @@ title: API
 |Example| K | X | R | 1
 
 
-#### Message Type 13 - WiFi Signal Verification
+#### Message Type - WiFi Signal Verification
 - Message sent to HMI to display WiFi connection state.
 - A received state of 0 indicates no connection
 - A state of 1 indicates a stable WiFi connection
@@ -61,7 +61,7 @@ title: API
 |Example| K | H | W | 1 |
 
 
-#### Message Type 15 - MQTT Error State
+#### Message Type - MQTT Error State
 ##### Message sent to HMI to display error state in HMI
 
 |  |  Byte 1: Sender     |  Byte 2: Receiver | Byte 3: Data Type | Byte 4: Data |
@@ -90,7 +90,7 @@ A: Data Message Out of Expected Range
 
 ### MQTT Received Messages
 
-#### Message Type 2, 14, 17 - System Information 
+#### Message Type - System Information 
 ##### Sensor/Motor/HMI data to be displayed on MQTT
 
 
@@ -105,7 +105,7 @@ A: Data Message Out of Expected Range
 Actuator Data describes motor switching speeds in predefined settings
 - MQTT will update with this data then forward the message to the HMI subsystem
 
-#### Message Type 3, 8, 20 - Subsystem Error 
+#### Message Type - Subsystem Error 
 ##### Error State in a Specific Subsystem, displayed over MQTT for debugging purposes
 
 |  |  Byte 1: Sender     |  Byte 2: Receiver | Byte 3-5: Error Type | Byte 6: Error Code |
