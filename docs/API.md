@@ -86,8 +86,6 @@ Error Types:
 9: Unknown Error Processing MQTT Message - Check Terminal for further Details
 
 
-
-
 ### MQTT Received Messages
 
 #### Message Type - System Information 
