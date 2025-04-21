@@ -33,7 +33,7 @@ title: API
 ##### All messages are converted to UTF-8 for UART transmission
 
 ### MQTT Sent Messages
-#### Message Type 7 - Master System Reset
+#### Message Type 5 - Master System Reset
 - Broadcast message from remote user on MQTT to trigger reset on the system. 
 - If RST is sent to the MQTT SUB,  it will trigger this static message to reset all subsystems.
 
@@ -46,7 +46,7 @@ title: API
 |Example| K | X | R | 1
 
 
-#### Message Type 6 - WiFi Signal Verification
+#### Message Type 4 - WiFi Signal Verification
 - Message sent to HMI to display WiFi connection state.
 - A received state of 0 indicates no connection
 - A state of 1 indicates a stable WiFi connection
@@ -61,7 +61,7 @@ title: API
 |Example| K | H | W | 1 |
 
 
-#### Message Type 8 - MQTT Error State
+#### Message Type 6 - MQTT Error State
 ##### Message to Show MQTT Error Code
 
 |  |  Byte 1: Sender     |  Byte 2: Receiver | Byte 3: Data Type | Byte 4: Data |
