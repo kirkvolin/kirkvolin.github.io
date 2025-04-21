@@ -33,7 +33,7 @@ title: API
 ##### All messages are converted to UTF-8 for UART transmission
 
 ### MQTT Sent Messages
-#### Message Type - Master System Reset
+#### Message Type 7 - Master System Reset
 - Broadcast message from remote user on MQTT to trigger reset on the system. 
 - If RST is sent to the MQTT SUB,  it will trigger this static message to reset all subsystems.
 
@@ -46,7 +46,7 @@ title: API
 |Example| K | X | R | 1
 
 
-#### Message Type - WiFi Signal Verification
+#### Message Type 6 - WiFi Signal Verification
 - Message sent to HMI to display WiFi connection state.
 - A received state of 0 indicates no connection
 - A state of 1 indicates a stable WiFi connection
@@ -61,30 +61,30 @@ title: API
 |Example| K | H | W | 1 |
 
 
-#### Message Type - MQTT Error State
-##### Message sent to HMI to display error state in HMI
+#### Message Type 8 - MQTT Error State
+##### Message to Show MQTT Error Code
 
 |  |  Byte 1: Sender     |  Byte 2: Receiver | Byte 3: Data Type | Byte 4: Data |
 | -----------| ----------- | -- | -- | -- |
-|Variable Name| MQTT_ID  | HMI_ID | error_type | error_code |
+|Variable Name| MQTT_ID  | Broadcast_ID | error_type | error_code |
 |Variable Type| char  | char | char | uint8_t |
-|Min| K  | H | F | 1 |
-|Max| K  | H | F | 9 |
-|Example| K | H | F | 3 |
+|Min| K  | X | F | 1 |
+|Max| K  | X | F | 9 |
+|Example| K | X | F | 3 |
 
 Error Types:
 
-0: Unknown Error Occurred Handling MQTT Message - Check Terminal for Further Details
-1: Invalid Sender ID  
-2: Invalid Receiver ID  
-3: Unexpected Message Type Sent to MQTT ID  
-4: Unknown Error Handling UART Message - Check Terminal for Further Details  
-5: Unexpected Message Type Sent to Broadcast ID  
-6: Max Message Length Exceeded, Prefix Detected
-7: Max Message Length Exceeded Without Prefix Detected  
-8: Invalid Command Received over MQTT  
-9: Invalid Message Length Received from MQTT (3 Characters Expected)    
-A: Data Message Out of Expected Range
+0: Invalid Sender ID
+1: Invalid Receiver ID
+2: Unknown Address Received
+3: Unexpected Message Sent to MQTT ID
+4: Unknown Error - Check Terminal for Further Details
+5: Unexpected Message Sent to Broadcast ID
+6: Max Message Length Exceeded With Prefix Detected
+7: Max Message Length Exceeded Without Prefix Detected
+8: Invalid Message Received Over MQTT
+9: Unknown Error Processing MQTT Message - Check Terminal for further Details
+
 
 
 
