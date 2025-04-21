@@ -1,0 +1,10 @@
+[ProjectGroup]
+Version=1.0
+[Project1]
+ProjectPath=Library\Ribbon Cable Header\AltiumDesigner\702460801.LibPkg
+[Project2]
+ProjectPath=Library\USBLC6_2SC6\AltiumDesigner\USBLC6-2SC6.LibPkg
+[Project3]
+ProjectPath=..\..\..\..\..\AppData\Local\Temp\6921842d-5750-4e3d-8d59-ef3cc6e367e3_Barrel Jack.zip.7e3\54-00132\Barrel Jack.LibPkg
+[Project4]
+ProjectPath=..\..\EGR304 Embedded Sys Design Project 1\Homework 7\EGR314 ESP32 MQTT\EGR314 ESP32 MQTT.PrjPcb
