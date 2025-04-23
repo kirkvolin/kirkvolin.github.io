@@ -68,7 +68,7 @@ title: API
 | -----------| ----------- | -- | -- | -- |
 |Variable Name| MQTT_ID  | Broadcast_ID | error_type | error_code |
 |Variable Type| char  | char | char | uint8_t |
-|Min| K  | X | F | 1 |
+|Min| K  | X | F | 0 |
 |Max| K  | X | F | 9 |
 |Example| K | X | F | 3 |
 
