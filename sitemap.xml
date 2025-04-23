@@ -2,37 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://kirkvolin.github.io/</loc>
-         <lastmod>2025-04-21</lastmod>
+         <lastmod>2025-04-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kirkvolin.github.io/API/</loc>
-         <lastmod>2025-04-21</lastmod>
+         <lastmod>2025-04-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kirkvolin.github.io/Block_Diagram/</loc>
-         <lastmod>2025-04-21</lastmod>
+         <lastmod>2025-04-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kirkvolin.github.io/Component_Selection/</loc>
-         <lastmod>2025-04-21</lastmod>
+         <lastmod>2025-04-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kirkvolin.github.io/Hardware_Order/</loc>
-         <lastmod>2025-04-21</lastmod>
+         <lastmod>2025-04-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kirkvolin.github.io/Schematic_Design/</loc>
-         <lastmod>2025-04-21</lastmod>
+         <lastmod>2025-04-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kirkvolin.github.io/static/node_modules/mathjax/</loc>
-         <lastmod>2025-04-21</lastmod>
+         <lastmod>2025-04-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
