@@ -6,6 +6,8 @@ tags:
 ---
 
 
+<iframe src="https://lumalabs.ai/embed/3022bc8c-3bbc-4fa1-8d5c-b79c90673635?mode=sparkles&background=%23ffffff&color=%23000000&showTitle=true&loadBg=true&logoPosition=bottom-left&infoPosition=bottom-right&cinematicVideo=undefined&showMenu=false" width="600" height="400" frameborder="0" title="luma embed" style="border: none;"></iframe>
+
 ## Hello! My name is Kirk Volin
 
 I am a student as ASU Polytechnic pursuing a Bachelor's in Robotics Engineering
