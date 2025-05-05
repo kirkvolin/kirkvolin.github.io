@@ -483,6 +483,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#pcb" class="md-nav__link">
+    PCB
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#zip-file" class="md-nav__link">
     ZIP File
   </a>
@@ -606,6 +613,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#pcb" class="md-nav__link">
+    PCB
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#zip-file" class="md-nav__link">
     ZIP File
   </a>
@@ -639,9 +653,15 @@
 
 <h2 id="schematic">Schematic</h2>
 <p><a class="glightbox" href="https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/Schematic%20Assets/ESP32%20MQTT%20Schematic.png?raw=true" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Schematic" src="https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/Schematic%20Assets/ESP32%20MQTT%20Schematic.png?raw=true" /></a></p>
+<h2 id="pcb">PCB</h2>
+<p><a class="glightbox" href="assets/simulation_image_top.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Top" src="assets/simulation_image_top.png" /></a></p>
+<p><a class="glightbox" href="assets/simulation_image_bottom.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Bottom" src="assets/simulation_image_bottom.png" /></a></p>
 <h2 id="zip-file">ZIP File</h2>
 <p><a href="https://github.com/kirkvolin/kirkvolin.github.io/tree/main/assets/Schematic%20Assets">Click here for PDF and ZIP files</a></p>
-<p>This schematic was created using Altium Designer. </p>
+<p>This PCB allows input power from 8 pin ribbon cables, USB, or a barrel jack. Any combination of power inputs can be connected together safely through the use of OR diodes. The voltage regulator circuit powers an ESP32-S3, which is the main component of the MQTT subsystem. The ESP32-S3 can be programmed and communicate with a PCB through the use of the ESP32-S3 USB OTG functionality. </p>
+<p>Future iterations of this design would likely include the use of a USB-UART bridge with auto-programming circuitry. This isn't a required feature for functionality, but without it, programming and communicating with the ESP32 can pose some issues based on settings in VSCode. Including the autoprogramming circuitry would allow this board to function similarly to an ESP32 devkit in regards to programming and communication.</p>
+<p>I would also use larger breakout headers. The ones that I chose for this iteration are smaller, to minimize board size, but do not function with standard jumper cables and require specialized 24 gauge jumpers. </p>
+<p>This schematic and PCB were created using Altium Designer. </p>
 
 
 
