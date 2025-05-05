@@ -7,9 +7,9 @@ title: Schematic Design
 
 ## PCB
 
-![Top](assets/simulation_image_top.png)
+![Top](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/simulation_image_top.png?raw=true)
 
-![Bottom](assets/simulation_image_bottom.png)
+![Bottom](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/simulation_image_bottom.png?raw=true)
 
 ## ZIP File
 [Click here for PDF and ZIP files](https://github.com/kirkvolin/kirkvolin.github.io/tree/main/assets/Schematic%20Assets)
