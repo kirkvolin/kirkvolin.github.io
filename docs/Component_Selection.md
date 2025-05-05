@@ -140,4 +140,5 @@ All surface mount components such as resistors, capacitors, etc. are planned to 
 ![Power Budget 2](https://github.com/kirkvolin/kirkvolin.github.io/blob/main/assets/Power%20Budget/Power%20Budget%202.png?raw=true)
 
 
+With this subsystem, the primary power draw is the ESP32-S3. I allowed an extra 50% current capacity minimum when selecting my voltage regulator to ensure that my subsystem was capable of powering the ESP32 and any additional components that might be added through design and integration.
 
