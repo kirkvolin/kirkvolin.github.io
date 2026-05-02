@@ -1,65 +1,66 @@
-# Your Portfolio Site
+# [Your Name]
 
-A single-file portfolio you can edit in any text editor. No build step, no frameworks — just open `index.html` in a browser and it works.
+Robotics, embedded, and controls engineer based in Phoenix, AZ.
+B.S. Robotics Engineering, [Your University] — class of 2026.
 
-## How to customize
+**Live site:** [yourusername.github.io](https://yourusername.github.io)
+**Email:** you@example.com
+**LinkedIn:** [linkedin.com/in/yourusername](https://linkedin.com/in/yourusername)
 
-Open `index.html` and look for the section comments (they look like `<!-- HERO -->`). Everything is grouped logically:
+---
 
-| Section          | What to change                                                         |
-| ---------------- | ---------------------------------------------------------------------- |
-| `<title>` + meta | Your name, SEO description (top of file)                               |
-| **NAVIGATION**   | The "Your Name" mark in the nav bar                                    |
-| **HERO**         | Your name in the tagline, location, education sidebar                  |
-| **ABOUT**        | The 3 paragraphs about you. Replace placeholders in `[brackets]`.      |
-| **PROJECTS**     | Each `<article class="project">` is one project. Copy/paste to add more |
-| **SKILLS**       | Update language/framework/hardware lists and skill levels              |
-| **EXPERIENCE**   | Update internships, research, education entries                        |
-| **CONTACT**      | Email address + GitHub/LinkedIn/Resume links                           |
+## About
 
-### Adding a project image
-Each project has a placeholder `<div class="project-placeholder">[ Project Image ]</div>`. Replace it with:
-```html
-<img class="project-img" src="images/your-image.jpg" alt="Description">
-```
-Drop your images in an `images/` folder next to `index.html`.
+I just finished my B.S. in Robotics Engineering and I'm looking for full-time work. My coursework, research, and project work span four areas:
 
-### Changing the accent color
-At the very top of the `<style>` block, find:
-```css
---accent: #b34423;   /* burnt vermillion */
-```
-Swap the hex value. A few alternatives that work with the cream background:
-- `#1f4e3d` — deep forest
-- `#0a3a5c` — engineering blue
-- `#7a3b8f` — aubergine
-- `#c08a2e` — brass
+- **Robotics** — autonomous systems, perception, motion planning, ROS / ROS 2
+- **Embedded systems** — Arduino, STM32, Jetson, custom firmware in C/C++
+- **Controls** — PID, state-space, system identification, sensor fusion
+- **Automation & integration** — taking projects from rough idea through CAD, PCB, firmware, and final integration
 
-## How to host it (so you can link it from your resume)
+I'm comfortable working across the stack — writing the perception code, designing the PCB it runs on, and machining the bracket that holds the camera. Most of what I've built has been hands-on project work, either through coursework, research with [Lab/Professor], or with the [Robotics Club / Team].
 
-The fastest free options:
+---
 
-**GitHub Pages** (recommended if you have a GitHub account):
-1. Create a new repo named `yourusername.github.io`
-2. Push `index.html` to it
-3. Your site is live at `https://yourusername.github.io`
+## Selected projects
 
-**Netlify Drop** (no account, no Git):
-1. Go to https://app.netlify.com/drop
-2. Drag the folder containing `index.html` onto the page
-3. You get a live URL instantly. Sign up to claim it permanently.
+A short index of the work featured on the site. Each project has its own repo with a full writeup, demo media, and build instructions.
 
-**Vercel**:
-1. Sign up with GitHub
-2. Import the repo, click deploy. Done.
+- **Autonomous SLAM Rover** — LiDAR-based SLAM on a Jetson Nano, full perception → planning → control stack. → [`slam-rover`](https://github.com/yourusername/slam-rover)
+- **Vision-Guided Robotic Arm** — 6-DoF pick-and-sort with OpenCV and a depth camera; inverse kinematics from scratch. → [`vision-arm`](https://github.com/yourusername/vision-arm)
+- **Quadruped Gait Controller** — Senior capstone. CPG-based trot gait, tuned via Bayesian optimization in PyBullet. → [`quad-gait`](https://github.com/yourusername/quad-gait)
+- **FPV Drone with Obstacle Avoidance** — Custom 5" quadcopter, frame to firmware. Reactive avoidance layer on Betaflight. → [`fpv-avoid`](https://github.com/yourusername/fpv-avoid)
 
-Once it's live, you can also point a custom domain at it (e.g. `yourname.dev`) — all three platforms support this for free.
+---
 
-## A few small tips
+## Toolkit
 
-- Keep the project descriptions tight — recruiters skim. The current ones are about the right length.
-- Replace placeholder GitHub/demo links before sharing. Empty `href="#"` links look unfinished.
-- Add a `resume.pdf` to the same folder and link it from the contact section.
-- If you want to swap out the color/font scheme entirely, the design tokens at the top of the `<style>` block control 90% of it.
+**Languages** — Python, C / C++, MATLAB, Bash, JavaScript, Verilog (exposed)
+**Frameworks** — ROS / ROS 2, Gazebo, OpenCV, PyTorch, PyBullet, NumPy / SciPy
+**Hardware** — Arduino, STM32, Raspberry Pi, Jetson, soldering / rework
+**Design** — SolidWorks, KiCad, 3D printing, CNC
 
-Good luck with the job hunt.
+---
+
+## Experience
+
+**[Company Name]** · Robotics Engineering Intern · 2025 — 2026
+Perception team. Contributed to sensor fusion pipelines for an autonomous mobile robot. Reduced false-positive obstacle detections by 22% via a Kalman filter rewrite.
+
+**[University] Robotics Lab** · Undergraduate Researcher · 2024 — 2025
+Bio-inspired locomotion under [Professor]. Co-authored a workshop paper on adaptive gait control. Maintained a fleet of 4 quadruped platforms used by graduate students.
+
+**[Your University]** · B.S. Robotics Engineering · 2022 — 2026
+Coursework: Mobile Robotics, Control Systems, Embedded Programming, Computer Vision, Machine Learning, Mechanical Design. GPA X.X / 4.0. Captain of [Robotics Club / Team].
+
+---
+
+## About this repo
+
+This repo contains the source for my portfolio site. It's a single static HTML file — no framework, no build step. The site is hosted via GitHub Pages from this repo's `main` branch.
+
+If you're looking at this repo wondering "did this person actually write the site themselves," the answer is yes — the HTML, CSS, and the bit of JavaScript that handles the scroll behavior and intersection-observer reveals are all in `index.html`. Editing it requires nothing more than a text editor.
+
+---
+
+*Last updated: Spring 2026*
