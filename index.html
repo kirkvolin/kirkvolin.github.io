@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kirk Volin — Robotics Engineer</title>
+<meta name="description" content="Portfolio of Kirk Volin, robotics, automation, embedded systems engineer.">
+
+<!-- ===========================================
+     FAVICON (optional - replace with your own)
+     =========================================== -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⬢</text></svg>">
+
+<!-- ===========================================
+     FONTS — Fraunces (serif display) + Geist (body) + JetBrains Mono (technical)
+     =========================================== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ===========================================
+   DESIGN TOKENS
+   =========================================== */
+:root {
+  --bg:        #f3efe6;
+  --bg-deep:   #ebe5d7;
+  --ink:       #15130f;
+  --muted:    #6a6557;
+  --line:      #2a2722;
+  --line-soft: #c8c0ad;
+  --accent:    #b34423;   /* burnt vermillion — change to taste */
+  --paper:     #faf7ef;
+
+  --serif: 'Fraunces', 'Times New Roman', serif;
+  --sans:  -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  --mono:  'JetBrains Mono', 'Courier New', monospace;
+}
+
+/* ===========================================
+   RESET + BASE
+   =========================================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  /* paper-like grain */
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(21,19,15,0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+
+::selection { background: var(--accent); color: var(--paper); }
+
+/* ===========================================
+   LAYOUT PRIMITIVES
+   =========================================== */
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 3rem);
+}
+
+.mono { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.serif { font-family: var(--serif); }
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 2.5rem;
+}
+.section-label::before {
+  content: '';
+  width: 32px;
+  height: 1px;
+  background: var(--ink);
+}
+
+/* ===========================================
+   NAV
+   =========================================== */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 1.25rem 0;
+  background: rgba(243, 239, 230, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+nav.scrolled { border-bottom-color: var(--line-soft); }
+
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-mark {
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.nav-mark::before {
+  content: '';
+  width: 10px; height: 10px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.nav-links a {
+  position: relative;
+  padding: 0.25rem 0;
+  transition: color 0.2s;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -2px;
+  width: 0; height: 1px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+.nav-links a:hover { color: var(--accent); }
+.nav-links a:hover::after { width: 100%; }
+
+@media (max-width: 720px) {
+  .nav-links { gap: 1rem; }
+  .nav-links li:nth-child(n+4) { display: none; }
+}
+
+/* ===========================================
+   HERO
+   =========================================== */
+.hero {
+  padding: clamp(7rem, 14vh, 10rem) 0 clamp(4rem, 10vh, 7rem);
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr auto;
+    align-items: end;
+  }
+}
+
+.hero-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+.hero-meta span { display: flex; gap: 0.6rem; }
+.hero-meta strong { color: var(--ink); font-weight: 500; }
+
+.hero h1 {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(2.8rem, 9vw, 7.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  margin-bottom: 2rem;
+  /* opsz axis variation */
+  font-variation-settings: "opsz" 144;
+}
+.hero h1 em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--accent);
+}
+
+.hero-tagline {
+  font-family: var(--serif);
+  font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+  line-height: 1.5;
+  font-weight: 400;
+  max-width: 38ch;
+  color: var(--ink);
+  margin-bottom: 2rem;
+}
+
+.hero-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-self: end;
+  max-width: 280px;
+}
+.hero-side-block {
+  border-top: 1px solid var(--line);
+  padding-top: 0.75rem;
+}
+.hero-side-block .label { display: block; margin-bottom: 0.35rem; }
+.hero-side-block .value {
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* corner decorations */
+.corner {
+  position: absolute;
+  width: 28px; height: 28px;
+  border-color: var(--ink);
+  border-style: solid;
+}
+.corner-tl { top: 92px; left: clamp(1.25rem, 4vw, 3rem); border-width: 1px 0 0 1px; }
+.corner-tr { top: 92px; right: clamp(1.25rem, 4vw, 3rem); border-width: 1px 1px 0 0; }
+.corner-bl { bottom: 30px; left: clamp(1.25rem, 4vw, 3rem); border-width: 0 0 1px 1px; }
+.corner-br { bottom: 30px; right: clamp(1.25rem, 4vw, 3rem); border-width: 0 1px 1px 0; }
+
+/* ===========================================
+   ABOUT
+   =========================================== */
+.about {
+  padding: clamp(4rem, 8vh, 7rem) 0;
+  border-top: 1px solid var(--line-soft);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+@media (min-width: 900px) {
+  .about-grid { grid-template-columns: 1fr 1.6fr; gap: 5rem; }
+}
+
+.about-heading {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+}
+
+.about-body p {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+  color: #2a2620;
+}
+.about-body p:first-letter {
+  font-size: 1.6em;
+  font-weight: 500;
+  float: left;
+  line-height: 1;
+  padding: 0.05em 0.1em 0 0;
+  color: var(--accent);
+}
+.about-body strong { font-weight: 500; color: var(--ink); }
+
+/* ===========================================
+   PROJECTS
+   =========================================== */
+.projects {
+  padding: clamp(4rem, 8vh, 7rem) 0;
+  border-top: 1px solid var(--line-soft);
+}
+
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.projects-header h2 {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.projects-header h2 em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 3rem 0;
+  border-top: 1px solid var(--line);
+  position: relative;
+  cursor: pointer;
+  transition: padding 0.4s ease;
+}
+.project:last-child { border-bottom: 1px solid var(--line); }
+
+@media (min-width: 900px) {
+  .project {
+    grid-template-columns: 80px 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .project:hover { padding-left: 1rem; }
+  .project:hover .project-title { color: var(--accent); }
+  .project:hover .project-img { transform: scale(1.02); }
+}
+
+.project-num {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  padding-top: 0.4rem;
+}
+
+.project-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  margin-bottom: 1rem;
+  transition: color 0.3s;
+}
+
+.project-desc {
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: #3a352c;
+  margin-bottom: 1.5rem;
+  max-width: 56ch;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+.tag {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  background: transparent;
+  transition: all 0.2s;
+}
+.project:hover .tag { border-color: var(--ink); }
+
+.project-links {
+  display: flex;
+  gap: 1.5rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--ink);
+  transition: color 0.2s, border-color 0.2s;
+}
+.project-links a:hover { color: var(--accent); border-color: var(--accent); }
+.project-links a span { font-size: 0.9rem; line-height: 0; }
+
+.project-visual {
+  background: var(--bg-deep);
+  aspect-ratio: 4/3;
+  border: 1px solid var(--line);
+  overflow: hidden;
+  position: relative;
+}
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.project-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 8px,
+      rgba(21,19,15,0.04) 8px,
+      rgba(21,19,15,0.04) 9px
+    );
+}
+
+/* ===========================================
+   SKILLS
+   =========================================== */
+.skills {
+  padding: clamp(4rem, 8vh, 7rem) 0;
+  border-top: 1px solid var(--line-soft);
+  background: var(--paper);
+  margin: 0 calc(50% - 50vw);
+  padding-left: max(calc(50vw - 620px), clamp(1.25rem, 4vw, 3rem));
+  padding-right: max(calc(50vw - 620px), clamp(1.25rem, 4vw, 3rem));
+}
+
+.skills h2 {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 4rem;
+}
+.skills h2 em { font-style: italic; }
+
+.skill-groups {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+@media (min-width: 720px) {
+  .skill-groups { grid-template-columns: repeat(2, 1fr); gap: 3rem 4rem; }
+}
+@media (min-width: 1000px) {
+  .skill-groups { grid-template-columns: repeat(3, 1fr); }
+}
+
+.skill-group h3 {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--line-soft);
+  display: flex;
+  justify-content: space-between;
+}
+.skill-group h3 span { color: var(--accent); }
+
+.skill-group ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.skill-group li {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+.skill-group li::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px dotted var(--line-soft);
+  margin: 0 0.5rem;
+  transform: translateY(-4px);
+}
+.skill-group li .level {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+}
+
+/* ===========================================
+   EXPERIENCE / EDUCATION
+   =========================================== */
+.experience {
+  padding: clamp(4rem, 8vh, 7rem) 0;
+}
+
+.exp-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 900px) {
+  .exp-grid { grid-template-columns: 240px 1fr; gap: 4rem; }
+}
+
+.exp-grid h2 {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.exp-grid h2 em { font-style: italic; }
+
+.exp-list { display: flex; flex-direction: column; }
+
+.exp-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--line-soft);
+}
+.exp-item:last-child { border-bottom: 1px solid var(--line-soft); }
+@media (min-width: 720px) {
+  .exp-item { grid-template-columns: 130px 1fr; gap: 2rem; align-items: baseline; }
+}
+
+.exp-date {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  padding-top: 0.25rem;
+}
+
+.exp-content h3 {
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.01em;
+}
+.exp-content .role {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}
+.exp-content p {
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.55;
+  color: #3a352c;
+}
+
+/* ===========================================
+   CONTACT / FOOTER
+   =========================================== */
+.contact {
+  padding: clamp(5rem, 10vh, 8rem) 0;
+  border-top: 1px solid var(--line);
+  background: var(--ink);
+  color: var(--paper);
+  margin: 0 calc(50% - 50vw);
+  padding-left: max(calc(50vw - 620px), clamp(1.25rem, 4vw, 3rem));
+  padding-right: max(calc(50vw - 620px), clamp(1.25rem, 4vw, 3rem));
+  position: relative;
+  overflow: hidden;
+}
+.contact::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 1px 1px, rgba(250,247,239,0.06) 1px, transparent 0);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+.contact > * { position: relative; z-index: 1; }
+
+.contact .mono { color: rgba(250,247,239,0.55); }
+.contact .section-label::before { background: var(--paper); }
+
+.contact h2 {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(2.5rem, 7vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: -0.025em;
+  margin-bottom: 2.5rem;
+  max-width: 14ch;
+}
+.contact h2 em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.contact-email {
+  display: inline-block;
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  border-bottom: 1px solid var(--paper);
+  padding-bottom: 4px;
+  margin-bottom: 3.5rem;
+  transition: color 0.2s, border-color 0.2s;
+}
+.contact-email:hover { color: var(--accent); border-color: var(--accent); }
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+.socials a:hover { border-color: var(--accent); color: var(--accent); }
+.socials a span { font-size: 1rem; line-height: 0; }
+
+footer {
+  padding: 2rem 0;
+  background: var(--ink);
+  color: rgba(250,247,239,0.4);
+  margin: 0 calc(50% - 50vw);
+  padding-left: max(calc(50vw - 620px), clamp(1.25rem, 4vw, 3rem));
+  padding-right: max(calc(50vw - 620px), clamp(1.25rem, 4vw, 3rem));
+  border-top: 1px solid rgba(250,247,239,0.1);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* ===========================================
+   ANIMATIONS
+   =========================================== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.reveal {
+  opacity: 0;
+  animation: fadeUp 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+}
+.reveal-1 { animation-delay: 0.1s; }
+.reveal-2 { animation-delay: 0.25s; }
+.reveal-3 { animation-delay: 0.4s; }
+.reveal-4 { animation-delay: 0.55s; }
+.reveal-5 { animation-delay: 0.7s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; animation: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* in-view reveal */
+.in-view-target {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.in-view-target.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
+</head>
+<body>
+
+<!-- ===========================================
+     NAVIGATION
+     =========================================== -->
+<nav id="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="nav-mark">Kirk Volin</a>
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ===========================================
+     HERO — replace name, role, tagline
+     =========================================== -->
+<section class="hero" id="top">
+  <span class="corner corner-tl"></span>
+  <span class="corner corner-tr"></span>
+  <span class="corner corner-bl"></span>
+  <span class="corner corner-br"></span>
+
+  <div class="container">
+    <div class="hero-meta reveal reveal-1">
+      <span><strong>LOCATION</strong> / Phoenix, AZ</span>
+      <span><strong>STATUS</strong> / Open to full-time roles</span>
+    </div>
+
+    <div class="hero-grid">
+      <div>
+        <h1 class="reveal reveal-2">
+          Robotics /<br>
+          embedded /<br>
+          controls<br>
+          <em>engineer.</em>
+        </h1>
+        <p class="hero-tagline reveal reveal-3">
+          I'm <strong>Kirk Volin</strong>. I just finished my B.S. in Robotics Engineering at Arizona State University. I work across robotics, embedded systems, controls, and automation.
+        </p>
+      </div>
+
+      <aside class="hero-side reveal reveal-4">
+        <div class="hero-side-block">
+          <span class="mono label">Education</span>
+          <span class="value">B.S. Robotics Engineering<br>ASU, 2026</span>
+        </div>
+        <div class="hero-side-block">
+          <span class="mono label">Focus Areas</span>
+          <span class="value">Robotics · Embedded<br>Controls · Automation</span>
+        </div>
+        <div class="hero-side-block">
+          <span class="mono label">Currently</span>
+          <span class="value">Looking for full-time roles in robotics, automation, or embedded systems or similar fields</span>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     ABOUT
+     =========================================== -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="section-label in-view-target"><span>01</span> &nbsp;/&nbsp; About</div>
+    <div class="about-grid">
+      <h3 class="about-heading in-view-target">
+        B.S. Robotics Engineering, 2026. Looking for full-time work.
+      </h3>
+      <div class="about-body in-view-target">
+        <p>
+          I just finished my <strong>B.S. in Robotics Engineering</strong> at Arizona State University. My coursework and project work focused on autonomous systems, perception, and embedded control — a wide mix that spans from microcontrollers to industrial systems.
+        </p>
+        <p>
+          Most of my experience comes from project work: course projects, applied research with professors, and especially my Capstone project. I'm comfortable taking a project from a rough idea through CAD, PCB design, firmware, and final integration. I am also experienced with the Rockwell ecosystem, PLC programming, and industrial robot control.
+        </p>
+        <p>
+          I'm currently looking for full-time roles in robotics, embedded systems, systems integration, or similar fields. Outside of work, I enjoy hobbies like playing guitar and video games.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     PROJECTS — duplicate a .project block to add more
+     =========================================== -->
+<section class="projects" id="work">
+  <div class="container">
+    <div class="section-label in-view-target"><span>02</span> &nbsp;/&nbsp; Selected Work</div>
+
+    <div class="projects-header">
+      <h2 class="in-view-target">Selected <em>projects.</em></h2>
+      <span class="mono">04 Projects</span>
+    </div>
+
+    <div class="project-list">
+
+      <!-- =====  PROJECT 01 ===== -->
+      <article class="project in-view-target">
+        <div class="project-num">P / 01</div>
+        <div>
+          <h3 class="project-title">Industrial Training Platform</h3>
+          <p class="project-desc">
+            Sponsored through Manufacturing Education Alliance, my team's capstone project was a modular training system designed to skill up people entering the manufacturing workforce through experience with real world industrial systems.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Rockwell</span>
+            <span class="tag">Epson Robot</span>
+            <span class="tag">Universal Robot</span>
+            <span class="tag">Keyence Sensors</span>
+            <span class="tag">Remote I/O</span>
+            <span class="tag">Industrial Systems</span>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener">GitHub <span>↗</span></a>
+            <a href="#" target="_blank" rel="noopener">Demo Video <span>↗</span></a>
+          </div>
+        </div>
+        <div class="project-visual">
+          <!-- Replace this placeholder with: <img class="project-img" src="path/to/image.jpg" alt="..."> -->
+          <div class="project-placeholder">[ Project Image ]</div>
+        </div>
+      </article>
+
+      <!-- =====  PROJECT 02 ===== -->
+      <article class="project in-view-target">
+        <div class="project-num">P / 02</div>
+        <div>
+          <h3 class="project-title">Vision-Guided Robotic Arm</h3>
+          <p class="project-desc">
+            A 6-DoF arm that picks and sorts objects by color and shape using OpenCV and a depth camera. Implemented inverse kinematics from scratch and tuned PID controllers for each joint. Achieved 94% sort accuracy across 200+ trials.
+          </p>
+          <div class="project-tags">
+            <span class="tag">OpenCV</span>
+            <span class="tag">Python</span>
+            <span class="tag">Inverse Kinematics</span>
+            <span class="tag">RealSense</span>
+            <span class="tag">PID</span>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener">GitHub <span>↗</span></a>
+            <a href="#" target="_blank" rel="noopener">Write-up <span>↗</span></a>
+          </div>
+        </div>
+        <div class="project-visual">
+          <div class="project-placeholder">[ Project Image ]</div>
+        </div>
+      </article>
+
+      <!-- =====  PROJECT 03 ===== -->
+      <article class="project in-view-target">
+        <div class="project-num">P / 03</div>
+        <div>
+          <h3 class="project-title">Quadruped Gait Controller</h3>
+          <p class="project-desc">
+            Senior capstone — designed and simulated a trot-gait controller for a quadruped robot in PyBullet. Explored central pattern generators and reinforcement learning approaches; final implementation used a CPG-based controller tuned via Bayesian optimization.
+          </p>
+          <div class="project-tags">
+            <span class="tag">PyBullet</span>
+            <span class="tag">Reinforcement Learning</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">CPG</span>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener">GitHub <span>↗</span></a>
+            <a href="#" target="_blank" rel="noopener">Paper <span>↗</span></a>
+          </div>
+        </div>
+        <div class="project-visual">
+          <div class="project-placeholder">[ Project Image ]</div>
+        </div>
+      </article>
+
+      <!-- =====  PROJECT 04 ===== -->
+      <article class="project in-view-target">
+        <div class="project-num">P / 04</div>
+        <div>
+          <h3 class="project-title">FPV Drone with Obstacle Avoidance</h3>
+          <p class="project-desc">
+            Built a custom 5-inch quadcopter from frame to firmware. Integrated a forward-facing depth sensor and wrote a reactive avoidance layer on top of Betaflight. Logged hundreds of test flights and iterated on the control loop based on telemetry.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Embedded C</span>
+            <span class="tag">Betaflight</span>
+            <span class="tag">PCB Design</span>
+            <span class="tag">Telemetry</span>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank" rel="noopener">GitHub <span>↗</span></a>
+            <a href="#" target="_blank" rel="noopener">Flight Log <span>↗</span></a>
+          </div>
+        </div>
+        <div class="project-visual">
+          <div class="project-placeholder">[ Project Image ]</div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     SKILLS
+     =========================================== -->
+<section class="skills" id="skills">
+  <div class="container">
+    <div class="section-label in-view-target"><span>03</span> &nbsp;/&nbsp; Toolkit</div>
+    <h2 class="in-view-target">Skills.</h2>
+
+    <div class="skill-groups">
+
+      <div class="skill-group in-view-target">
+        <h3>Languages <span>/ 06</span></h3>
+        <ul>
+          <li>Python <span class="level">EXPERT</span></li>
+          <li>C / C++ <span class="level">PROFICIENT</span></li>
+          <li>MATLAB <span class="level">PROFICIENT</span></li>
+          <li>JavaScript <span class="level">FAMILIAR</span></li>
+          <li>Bash <span class="level">FAMILIAR</span></li>
+          <li>Verilog <span class="level">EXPOSED</span></li>
+        </ul>
+      </div>
+
+      <div class="skill-group in-view-target">
+        <h3>Frameworks <span>/ 07</span></h3>
+        <ul>
+          <li>ROS / ROS 2 <span class="level">EXPERT</span></li>
+          <li>Gazebo <span class="level">PROFICIENT</span></li>
+          <li>OpenCV <span class="level">PROFICIENT</span></li>
+          <li>PyTorch <span class="level">PROFICIENT</span></li>
+          <li>PyBullet <span class="level">PROFICIENT</span></li>
+          <li>NumPy / SciPy <span class="level">EXPERT</span></li>
+          <li>Git / Linux <span class="level">EXPERT</span></li>
+        </ul>
+      </div>
+
+      <div class="skill-group in-view-target">
+        <h3>Hardware <span>/ 06</span></h3>
+        <ul>
+          <li>Arduino / STM32 <span class="level">EXPERT</span></li>
+          <li>Raspberry Pi / Jetson <span class="level">PROFICIENT</span></li>
+          <li>SolidWorks <span class="level">PROFICIENT</span></li>
+          <li>KiCad / EagleCAD <span class="level">PROFICIENT</span></li>
+          <li>Soldering / Rework <span class="level">EXPERT</span></li>
+          <li>3D Printing / CNC <span class="level">PROFICIENT</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     EXPERIENCE & EDUCATION
+     =========================================== -->
+<section class="experience" id="experience">
+  <div class="container">
+    <div class="section-label in-view-target"><span>04</span> &nbsp;/&nbsp; Experience</div>
+
+    <div class="exp-grid">
+      <h2 class="in-view-target">Experience.</h2>
+      <div class="exp-list">
+
+        <div class="exp-item in-view-target">
+          <div class="exp-date">2025 — 2026</div>
+          <div class="exp-content">
+            <h3>[Company Name]</h3>
+            <p class="role">Robotics Engineering Intern</p>
+            <p>Worked on the perception team, contributing to sensor fusion pipelines for an autonomous mobile robot. Reduced false-positive obstacle detections by 22% through a Kalman filter rewrite.</p>
+          </div>
+        </div>
+
+        <div class="exp-item in-view-target">
+          <div class="exp-date">2024 — 2025</div>
+          <div class="exp-content">
+            <h3>[University] Robotics Lab</h3>
+            <p class="role">Undergraduate Researcher</p>
+            <p>Researched bio-inspired locomotion under [Professor's name]. Co-authored a workshop paper on adaptive gait control. Maintained a fleet of 4 quadruped platforms used by graduate students.</p>
+          </div>
+        </div>
+
+        <div class="exp-item in-view-target">
+          <div class="exp-date">2022 — 2026</div>
+          <div class="exp-content">
+            <h3>Arizona State University</h3>
+            <p class="role">B.S. Robotics Engineering · GPA 3.X / 4.0</p>
+            <p>Coursework: Mobile Robotics, Control Systems, Embedded Programming, Computer Vision, Machine Learning, Mechanical Design. Captain of the [Robotics Club / Team Name].</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     CONTACT
+     =========================================== -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-label in-view-target"><span>05</span> &nbsp;/&nbsp; Get in touch</div>
+
+    <h2 class="in-view-target">Get in <em>touch.</em></h2>
+
+    <a href="mailto:you@example.com" class="contact-email in-view-target">you@example.com</a>
+
+    <div class="socials in-view-target">
+      <a href="#" target="_blank" rel="noopener">GitHub <span>↗</span></a>
+      <a href="#" target="_blank" rel="noopener">LinkedIn <span>↗</span></a>
+      <a href="#" target="_blank" rel="noopener">Resume PDF <span>↗</span></a>
+      <a href="#" target="_blank" rel="noopener">Google Scholar <span>↗</span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Kirk Volin</span>
+  <span>Last updated: Spring 2026</span>
+</footer>
+
+<script>
+// nav border on scroll
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 10);
+});
+
+// in-view reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.in-view-target').forEach((el) => observer.observe(el));
+</script>
+
+</body>
+</html>
