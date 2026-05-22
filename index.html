@@ -456,6 +456,20 @@ nav.scrolled { border-bottom-color: var(--line-soft); }
 }
 
 /* ===========================================
+   WIP PROJECTS
+   =========================================== */
+.wip-projects .project {
+  border-top-style: dashed;
+}
+.wip-projects .project:last-child {
+  border-bottom-style: dashed;
+}
+.tag-wip {
+  border-color: #c8a44a;
+  color: #c8a44a;
+}
+
+/* ===========================================
    SKILLS
    =========================================== */
 .skills {
@@ -736,6 +750,7 @@ footer {
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="#wip">In Progress</a></li>
     </ul>
   </div>
 </nav>
@@ -936,11 +951,55 @@ footer {
 </section>
 
 <!-- ===========================================
+     PROJECTS IN PROGRESS
+     =========================================== -->
+<section class="projects wip-projects" id="wip">
+  <div class="container">
+    <div class="section-label in-view-target"><span>03</span> &nbsp;/&nbsp; In Progress</div>
+
+    <div class="projects-header">
+      <h2 class="in-view-target">In <em>Progress.</em></h2>
+      <span class="mono">01 Project</span>
+    </div>
+
+    <div class="project-list">
+
+      <!-- ===== WIP PROJECT 01 ===== -->
+      <article class="project in-view-target">
+        <div class="project-num">WIP / 01</div>
+        <div>
+          <h3 class="project-title">Freedrive Robot Arm</h3>
+          <p class="project-desc">
+            A personal project building a custom multi-axis robot arm with freedrive (gravity-compensated teach mode) capability. The arm can be physically guided by hand to record trajectories for playback, making programming intuitive without a pendant or offline tools. Currently in early development, focusing on the joint hardware, motor control firmware, and gravity compensation algorithms.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Robot Arm</span>
+            <span class="tag">Freedrive</span>
+            <span class="tag">Gravity Compensation</span>
+            <span class="tag">Motor Control</span>
+            <span class="tag">Embedded Systems</span>
+            <span class="tag">Python</span>
+            <span class="tag tag-wip">In Progress</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/kirkvolin/freedrive-robot-arm" target="_blank" rel="noopener">GitHub <span>↗</span></a>
+          </div>
+        </div>
+        <div class="project-visual">
+          <div class="project-placeholder">In Progress</div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
      SKILLS
      =========================================== -->
 <section class="skills" id="skills">
   <div class="container">
-    <div class="section-label in-view-target"><span>03</span> &nbsp;/&nbsp; Toolkit</div>
+    <div class="section-label in-view-target"><span>04</span> &nbsp;/&nbsp; Toolkit</div>
     <h2 class="in-view-target">Skills.</h2>
 
     <div class="skill-groups">
@@ -1007,7 +1066,7 @@ footer {
      =========================================== -->
 <section class="experience" id="experience">
   <div class="container">
-    <div class="section-label in-view-target"><span>04</span> &nbsp;/&nbsp; Experience</div>
+    <div class="section-label in-view-target"><span>05</span> &nbsp;/&nbsp; Experience</div>
 
     <div class="exp-grid">
       <h2 class="in-view-target">Experience.</h2>
@@ -1068,7 +1127,7 @@ footer {
      =========================================== -->
 <section class="contact" id="contact">
   <div class="container">
-    <div class="section-label in-view-target"><span>05</span> &nbsp;/&nbsp; Contact Details</div>
+    <div class="section-label in-view-target"><span>06</span> &nbsp;/&nbsp; Contact Details</div>
 
     <h2 class="in-view-target">Get in touch.</h2>
 
