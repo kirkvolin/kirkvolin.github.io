@@ -158,9 +158,36 @@ nav.scrolled { border-bottom-color: var(--line-soft); }
 .nav-links a:hover { color: var(--accent); }
 .nav-links a:hover::after { width: 100%; }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-social {
+  display: flex;
+  gap: 1.5rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding-left: 1.5rem;
+  margin-left: 1.5rem;
+  border-left: 1px solid var(--line);
+}
+.nav-social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+.nav-social a span { font-size: 0.9rem; line-height: 0; }
+.nav-social a:hover { color: var(--accent); }
+
 @media (max-width: 720px) {
   .nav-links { gap: 1rem; }
   .nav-links li:nth-child(n+4) { display: none; }
+  .nav-social { display: none; }
 }
 
 /* ===========================================
@@ -745,13 +772,20 @@ footer {
 <nav id="nav">
   <div class="container nav-inner">
     <a href="#top" class="nav-mark">Kirk Volin</a>
-    <ul class="nav-links">
-      <li><a href="#work">Work</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#wip">In Progress</a></li>
-    </ul>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#wip">In Progress</a></li>
+      </ul>
+      <div class="nav-social">
+        <a href="https://github.com/kirkvolin" target="_blank" rel="noopener">GitHub <span>↗</span></a>
+        <a href="https://www.linkedin.com/in/kirk-volin-780972386/" target="_blank" rel="noopener">LinkedIn <span>↗</span></a>
+        <a href="Volin Resume.pdf" target="_blank" rel="noopener">Resume <span>↗</span></a>
+      </div>
+    </div>
   </div>
 </nav>
 
