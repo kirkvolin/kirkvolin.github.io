@@ -11,7 +11,7 @@
 /* ── Print setup ── */
 @page {
   size: letter;
-  margin: 0.55in 0.6in;
+  margin: 0.45in 0.6in;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -34,7 +34,7 @@ body {
   background: #fff;
   max-width: 8.5in;
   margin: 0 auto;
-  padding: 0.55in 0.6in;
+  padding: 0.45in 0.6in;
 }
 
 /* ── Header ── */
@@ -42,9 +42,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding-bottom: 0.55rem;
+  padding-bottom: 0.4rem;
   border-bottom: 2px solid var(--ink);
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.55rem;
 }
 
 .header-left h1 {
@@ -79,7 +79,7 @@ body {
 
 /* ── Section ── */
 section {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.35rem;
 }
 
 .section-title {
@@ -89,8 +89,8 @@ section {
   text-transform: uppercase;
   color: var(--accent);
   border-bottom: 1px solid var(--rule);
-  padding-bottom: 0.2rem;
-  margin-bottom: 0.45rem;
+  padding-bottom: 0.15rem;
+  margin-bottom: 0.3rem;
 }
 
 /* ── Summary ── */
@@ -149,7 +149,7 @@ section {
 
 /* ── Projects ── */
 .project-item {
-  margin-bottom: 0.38rem;
+  margin-bottom: 0.28rem;
   padding-left: 0.65rem;
   border-left: 2px solid var(--rule);
 }
@@ -178,7 +178,7 @@ section {
   font-size: 7pt;
   color: var(--accent);
   letter-spacing: 0.05em;
-  margin-bottom: 0.18rem;
+  margin-bottom: 0.1rem;
 }
 
 .project-desc {
@@ -188,7 +188,7 @@ section {
 
 /* ── Experience ── */
 .exp-item {
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.28rem;
 }
 
 .exp-header {
@@ -213,7 +213,7 @@ section {
   font-style: italic;
   color: var(--muted);
   font-size: 9pt;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.1rem;
 }
 
 .exp-desc {
@@ -231,7 +231,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.2rem;
 }
 
 .edu-left .edu-school {
@@ -270,8 +270,8 @@ section {
   font-size: 8.5pt;
   color: var(--muted);
   border-top: 1px solid var(--rule);
-  padding-top: 0.35rem;
-  margin-top: 0.4rem;
+  padding-top: 0.25rem;
+  margin-top: 0.28rem;
 }
 
 .early-career strong { color: var(--ink); }
@@ -325,19 +325,15 @@ section {
   <div class="skills-grid">
     <div class="skill-row">
       <span class="skill-label">Programming</span>
-      <span>Python, C/C++, MATLAB, Ladder Logic, Structured Text, URScript, Epson SPEL+</span>
+      <span>Python, C/C++, MATLAB, Ladder Logic, Structured Text, URScript, Epson SPEL+, OpenCV, NumPy / SciPy, ESP-IDF</span>
     </div>
     <div class="skill-row">
       <span class="skill-label">Protocols</span>
       <span>EtherNet/IP · CIP, MQTT, UART / SPI / I2C, Modbus TCP/IP, USB</span>
     </div>
     <div class="skill-row">
-      <span class="skill-label">Libraries</span>
-      <span>pylogix, pygame, OpenCV, NumPy / SciPy, ESP-IDF</span>
-    </div>
-    <div class="skill-row">
       <span class="skill-label">Systems</span>
-      <span>Studio 5000, Siemens TIA Portal (familiar), PLC programming, robotic arm integration, embedded firmware</span>
+      <span>Studio 5000, PLC programming, robotic arm integration, embedded firmware</span>
     </div>
     <div class="skill-row">
       <span class="skill-label">Design</span>
@@ -345,7 +341,7 @@ section {
     </div>
     <div class="skill-row">
       <span class="skill-label">Lab</span>
-      <span>Custom PCB design, soldering &amp; rework, oscilloscopes, multimeters, signal generators, manual machining, 3D printing</span>
+      <span>Custom PCB design, soldering &amp; rework, oscilloscopes, multimeters, signal generators, manual machining, 3D printing, laser engraving, vinyl cutting, CNC routing</span>
     </div>
   </div>
 </section>
@@ -363,8 +359,7 @@ section {
     </div>
     <div class="project-tags">Rockwell Studio 5000 · Allen-Bradley CompactLogix · EtherNet/IP · UR5e · Python · pylogix · HMI</div>
     <p class="project-desc">
-      Sole engineer; designed, built, and integrated a portable industrial automation demo in under three weeks - EtherNet/IP
-      network linking an Allen-Bradley CompactLogix PLC, remote I/O, and UR5e, manual robotic control with PS5 controller via Python 
+      Sole engineer; designed, built, and integrated a portable EtherNet/IP automation demo in under three weeks — CompactLogix PLC, remote I/O, and UR5e with PS5-controller-driven manual robotic control via Python.
     </p>
   </div>
 
@@ -375,8 +370,7 @@ section {
     </div>
     <div class="project-tags">Rockwell Studio 5000 · EtherNet/IP · UR3 · Epson SCARA · Pneumatics · Fusion 360</div>
     <p class="project-desc">
-      Controls engineer on a Manufacturing Education Alliance sponsored capstone. Programmed the PLC, configured
-      EtherNet/IP networking and remote I/O, and integrated two UR3s, an Epson SCARA, conveyors in Studio 5000.
+      Controls engineer on a Manufacturing Education Alliance–sponsored capstone; programmed the PLC, configured EtherNet/IP networking and remote I/O, and integrated two UR3s, an Epson SCARA, and conveyors in Studio 5000.
     </p>
   </div>
 
@@ -387,9 +381,7 @@ section {
     </div>
     <div class="project-tags">Raspberry Pi 5 · MediaPipe · Python · Fusion 360 · 3D Printing</div>
     <p class="project-desc">
-      Mechanical lead on a Dignity Health–sponsored therapy device for hemiparesis patients. Designed and 3D-printed
-      the enclosure in Fusion 360; system runs MediaPipe facial tracking on a Raspberry Pi 5 to detect head pose,
-      deliver audio prompts, and log session data for clinician review.
+      Mechanical lead on a Dignity Health–sponsored therapy device for hemiparesis patients; designed and 3D-printed the Fusion 360 enclosure around a Raspberry Pi 5 running MediaPipe facial tracking to detect head pose, deliver audio prompts, and log session data.
     </p>
   </div>
 
@@ -400,6 +392,17 @@ section {
 ══════════════════════════════════════════ -->
 <section>
   <div class="section-title">Professional Experience</div>
+
+  <div class="exp-item">
+    <div class="exp-header">
+      <span class="exp-company">ASU Polytechnic Innovation Hub</span>
+      <span class="exp-date">2023 – 2024</span>
+    </div>
+    <div class="exp-role">Makerspace Assistant — Arizona State University, Mesa, AZ</div>
+    <ul class="exp-desc">
+      <li>Operated laser engravers, vinyl cutters, CNC routers, and 3D printers; trained and assisted students on machine setup and operation, performed equipment maintenance, and enforced lab safety procedures.</li>
+    </ul>
+  </div>
 
   <div class="exp-item">
     <div class="exp-header">
